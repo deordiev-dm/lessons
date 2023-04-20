@@ -24,7 +24,7 @@ body {
 }
 
 .page {
-	padding: 50px 0;
+	padding: 50px 0 0;
 	@media (max-width: 767.98px) {
 		& {
 			padding: 30px 0;
@@ -1067,6 +1067,9 @@ body {
 	}
 }
 .explore {
+	&:not(:last-child) {
+		margin-bottom: 82px;
+	}
 	@media (max-width: 750px) {
 		& {
 			overflow: hidden;
@@ -1252,6 +1255,104 @@ body {
 	&__button {
 		&:not(:last-child) {
 			margin-bottom: 20px;
+		}
+	}
+}
+.blog {
+	padding: 46px 0;
+	background-color: #f8f9fb;
+	// .blog__container
+	&__container {
+	}
+	// .blog__title
+	&__title {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.5;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	// .blog__articles
+	&__articles {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 15px 30px;
+	}
+	// .blog__article
+	&__article {
+		background-color: #ffffff;
+		display: flex;
+		row-gap: 70px;
+		flex-direction: column;
+		padding: 25px 25px 15px 25px;
+	}
+}
+.article-blog {
+	// .article-blog__body
+	&__body {
+		flex-grow: 1;
+	}
+	// .article-blog__category
+	&__category {
+		display: inline-block;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.5;
+		text-transform: uppercase;
+		color: #bdbdbd;
+		transition: color 300ms;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #eb5757;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 21px;
+		}
+	}
+	// .article-blog__title
+	&__title {
+		display: inline-block;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 1.5;
+		text-transform: capitalize;
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+		transition: color 300ms;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #eb5757;
+			}
+		}
+	}
+	// .article-blog__text
+	&__text {
+		font-family: "Roboto", sans-serif;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.01em;
+	}
+	// .article-blog__footer
+	&__footer {
+		border-top: 3px solid #000;
+		padding-top: 8px;
+	}
+	// .article-blog__author
+	&__author {
+		display: inline-block;
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 1.5;
+		color: #4f4f4f;
+		transition: color 300ms;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #eb5757;
+			}
 		}
 	}
 }
