@@ -1070,6 +1070,11 @@ body {
 	&:not(:last-child) {
 		margin-bottom: 82px;
 	}
+	@media (max-width: 991.98px) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
 	@media (max-width: 750px) {
 		& {
 			overflow: hidden;
@@ -1260,6 +1265,16 @@ body {
 }
 .blog {
 	padding: 46px 0;
+	@media (max-width: 991.98px) {
+		& {
+			padding: 25px 0px;
+		}
+	}
+	@media (max-width: 680px) {
+		& {
+			padding: 20px 0px;
+		}
+	}
 	background-color: #f8f9fb;
 	// .blog__container
 	&__container {
@@ -1272,12 +1287,42 @@ body {
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
+		@media (max-width: 991.98px) {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: 680px) {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
 	}
 	// .blog__articles
 	&__articles {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 15px 30px;
+		@media (max-width: 1550px) {
+			& {
+				gap: 15px 15px;
+			}
+		}
+		@media (max-width: 1150px) {
+			& {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		@media (max-width: 640px) {
+			& {
+				gap: 10px 10px;
+			}
+		}
+		@media (max-width: 510px) {
+			& {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
 	}
 	// .blog__article
 	&__article {
@@ -1286,6 +1331,28 @@ body {
 		row-gap: 70px;
 		flex-direction: column;
 		padding: 25px 25px 15px 25px;
+		@media (max-width: 1670px) {
+			& {
+				row-gap: 50px;
+			}
+		}
+		@media (max-width: 1400px) {
+			& {
+				padding: 25px 15px 15px 15px;
+			}
+		}
+		@media (max-width: 1150px) {
+			& {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+		}
+		@media (max-width: 767.98px) {
+			& {
+				padding: 10px 15px 15px 10px;
+				row-gap: 20px;
+			}
+		}
 	}
 }
 .article-blog {
@@ -1310,6 +1377,11 @@ body {
 		&:not(:last-child) {
 			margin-bottom: 21px;
 		}
+		@media (max-width: 767.98px) {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
 	}
 	// .article-blog__title
 	&__title {
@@ -1320,6 +1392,18 @@ body {
 		text-transform: capitalize;
 		&:not(:last-child) {
 			margin-bottom: 32px;
+		}
+		@media (max-width: 1400px) {
+			& {
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		@media (max-width: 710px) {
+			& {
+				font-size: 22px;
+			}
 		}
 		transition: color 300ms;
 		@media (any-hover: hover) {
