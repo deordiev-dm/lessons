@@ -206,6 +206,34 @@ body {
 		}
 	}
 }
+.button-load-more {
+	align-self: center;
+	border: 2px solid #c4c4c4;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: #828282;
+	padding: 15px 30px;
+	transition: all 300ms;
+	@media (any-hover: hover) {
+		&:hover {
+			border: 2px solid #000;
+			color: #000;
+		}
+	}
+	@media (max-width: 767.98px) {
+		& {
+			align-self: stretch;
+		}
+	}
+	@media (max-width: 515px) {
+		& {
+			padding: 10px 20px;
+		}
+	}
+}
 .banners {
 	&:not(:last-child) {
 		margin-bottom: 30px;
@@ -563,27 +591,6 @@ body {
 	}
 	// .catalog__button
 	&__button {
-		align-self: center;
-		border: 2px solid #c4c4c4;
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 1.5;
-		letter-spacing: 0.5px;
-		text-transform: uppercase;
-		color: #828282;
-		padding: 15px 30px;
-		transition: all 300ms;
-		@media (any-hover: hover) {
-			&:hover {
-				border: 2px solid #000;
-				color: #000;
-			}
-		}
-		@media (max-width: 767.98px) {
-			& {
-				align-self: stretch;
-			}
-		}
 	}
 }
 .sidebar-catalog {
@@ -958,9 +965,28 @@ body {
 	}
 	&_margin-bottom:not(:last-child) {
 		margin-bottom: 118px;
+		@media (max-width: 991.98px) {
+			& {
+				margin-bottom: 50px;
+			}
+		}
+		@media (max-width: 500px) {
+			& {
+				& {
+					margin-bottom: 30px;
+				}
+			}
+		}
 	}
 	// .products__container
 	&__container {
+		@media (max-width: 767.98px) {
+			& {
+				display: flex;
+				flex-direction: column;
+				row-gap: 10px;
+			}
+		}
 	}
 	// .products__header
 	&__header {
@@ -985,6 +1011,11 @@ body {
 	&__buttons {
 		display: flex;
 		column-gap: 4px;
+		@media (max-width: 767.98px) {
+			& {
+				display: none;
+			}
+		}
 	}
 	// .products__button
 	&__button {
@@ -1026,8 +1057,21 @@ body {
 	// .products__item
 	&__item {
 	}
+	&__load-button {
+		display: none;
+		@media (max-width: 767.98px) {
+			& {
+				display: block;
+			}
+		}
+	}
 }
 .explore {
+	@media (max-width: 750px) {
+		& {
+			overflow: hidden;
+		}
+	}
 	// .explore__container
 	&__container {
 		position: relative;
@@ -1047,6 +1091,7 @@ body {
 		@media (max-width: 750px) {
 			& {
 				grid-template-columns: 1fr;
+				min-height: 200px;
 			}
 		}
 	}
@@ -1056,7 +1101,16 @@ body {
 		padding-top: 34.245283%; /* 363/1060 */
 		@media (max-width: 750px) {
 			& {
-				padding-top: 86.30137%; /* 252/292 */
+				padding-top: 78.26087%; /* 252/322 */
+			}
+		}
+		@media (max-width: 750px) {
+			& {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
 			}
 		}
 		img {
@@ -1066,20 +1120,19 @@ body {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+			@media (max-width: 750px) {
+				& {
+					padding: 0 15px;
+				}
+			}
 		}
 	}
 	.explore__wrapper {
 		@media (max-width: 750px) {
 			& {
-				height: 100%;
-				width: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				display: flex;
-				justify-content: center;
-				align-items: end;
-				padding-bottom: 2%;
+				padding: 31.36646% 3.726708% 3.726708% 3.726708%;
+				// 31.36646% /* 101/322 */
+				// 3.726708% /* 12/322 */
 			}
 		}
 	}
@@ -1091,12 +1144,21 @@ body {
 		max-width: 640px;
 		@media (max-width: 750px) {
 			& {
-				background: #ffffff;
+				position: relative;
+				z-index: 2;
 				border: 2px solid #c4c4c4;
-				align-items: center;
+				background: #ffffff;
 				text-align: center;
-				padding: 15px 20px;
-				width: 90%;
+				align-items: center;
+				padding: 5.970149% 7.462687% 4.850746%;
+				// 5.970149%; /* 16/268 */ top
+				// 7.462687%; /* 20/268 */ left/right
+				// 4.850746%; /* 13/268 */ bottom
+				@media (max-width: 490px) {
+					& {
+						padding: 7px 5px 5px;
+					}
+				}
 			}
 		}
 	}
@@ -1126,13 +1188,17 @@ body {
 			& {
 				padding-right: 0;
 				padding-top: 0;
-			}
-		}
-		@media (max-width: 700px) {
-			& {
 				font-size: 24px;
 				&:not(:last-child) {
 					margin-bottom: 10px;
+				}
+			}
+		}
+		@media (max-width: 490px) {
+			& {
+				font-size: 20px;
+				&:not(:last-child) {
+					margin-bottom: 5px;
 				}
 			}
 		}
@@ -1174,6 +1240,13 @@ body {
 				}
 			}
 		}
+		@media (max-width: 490px) {
+			& {
+				&:not(:last-child) {
+					margin-bottom: 8px;
+				}
+			}
+		}
 	}
 	// .explore__button
 	&__button {
@@ -1181,6 +1254,4 @@ body {
 			margin-bottom: 20px;
 		}
 	}
-}
-.button {
 }
