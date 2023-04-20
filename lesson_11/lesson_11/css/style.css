@@ -1,0 +1,620 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap");
+
+body {
+	font-family: "Inter", sans-serif;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #212b36;
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+
+[class*="__container"] {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header {
+	background-color: #fff;
+}
+.wrapper__header {
+	position: fixed;
+	z-index: 5;
+	/* елемент втрачає свою блочну сутність, тому додаю мінімальну ширину, щоб шапка була на весь контейнер */
+	min-width: 100%;
+}
+
+.header__container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.header__container * {
+	/* хоча сама шапка втрачає свою блочну сутність, її дочірні елементи зберігають блочну поведінку */
+	display: inline-block;
+	vertical-align: middle;
+
+	font-size: 0; /* прибираю фантомний відступ */
+}
+
+.button-header__link,
+.sub-menu__link,
+.list-sub-sub-menu__link,
+.sub-sub-menu__heading,
+.nav-menu__link {
+	font-size: 16px; /* додаю розмір шрифту */
+}
+
+.header__container > *:not(:last-child) {
+	/* відступ вправо для дочірніх елементів першого рівня шапки */
+	margin-right: 45px;
+}
+
+/* логотип */
+.logo-header {
+}
+.header__logo {
+}
+
+.logo-header__image {
+	/* якщо логотип зміниться, то він все рівно не зламає верстку */
+	max-width: 100%;
+}
+/* логотип */
+
+/* кнопка з випадаючим меню */
+.button-header {
+	position: relative;
+	z-index: 5;
+	padding: 9px 20.81px 9px 20.39px;
+	border-radius: 5px;
+	transition: 250ms all;
+}
+
+.header__button {
+}
+
+.button-header__link {
+}
+
+.button-header__link::after {
+	/* стрілка після кнопки */
+	content: "";
+	display: inline-block;
+	height: 5.9px;
+	width: 11.1px;
+	background: url(../img/icons/arrow-down.svg) no-repeat;
+	vertical-align: middle;
+	margin-left: 13px;
+}
+
+.button-header:hover {
+	/* зміна фону кнопки при наведенні мишою */
+	background: #f4f7ff;
+}
+
+/* під-меню */
+.sub-menu {
+	background-color: #fff;
+	padding: 22px 24px;
+	border-radius: 5px;
+	min-width: 180px;
+
+	/* код який відповідає за невидимість елементу не у стані хавер */
+	visibility: hidden;
+	opacity: 0;
+}
+
+.button-header__sub-menu {
+	position: absolute;
+	top: 81px;
+	left: 0;
+	z-index: 5;
+
+	border: 0.5px solid #e7e7e7;
+	transition: all 250ms;
+}
+
+.button-header:hover .button-header__sub-menu {
+	/* код який відповідає за появу підменю при хавері на кнопку */
+	visibility: visible;
+	opacity: 1;
+}
+
+.sub-menu::after {
+	/* псевдоелемент-прокладка, не дає зникнути меню під час переведння миші з кпопки */
+	content: "";
+	position: absolute;
+	top: -20%;
+	left: -5%;
+	z-index: 4;
+
+	height: 125%; /* при абсолюті відсоток висоти береться без приколів */
+	width: 110%;
+}
+
+.sub-menu::before {
+	/* трикутничок зверху меню */
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 15px;
+	z-index: 5;
+
+	height: 15px;
+	width: 24px;
+	background: url(../img/design/triangle.svg) no-repeat;
+}
+
+.sub-menu > *:not(:last-child) {
+	/* відступи між пунктами підсписку */
+	margin-bottom: 13px;
+}
+
+.sub-menu__item {
+}
+
+.sub-menu__link {
+	position: relative;
+	z-index: 6;
+	font-weight: 500;
+	color: #637381;
+}
+
+.sub-menu__link:hover {
+	color: #3056d3;
+}
+
+.sub-menu__link_arrow {
+}
+
+.sub-menu__link_arrow::after {
+	/* стрілка */
+	content: "";
+	display: inline-block;
+	height: 10px;
+	width: 5px;
+	background: url(../img/icons/arrow-right.svg) no-repeat;
+	vertical-align: middle;
+	margin-left: 65px;
+}
+
+.sub-menu__link_arrow:hover:after {
+	/* зміна кольору стрілки */
+	background: url(../img/icons/arrow-right_hover.svg) no-repeat;
+}
+/* під-меню */
+
+/* під-під-меню */
+.sub-sub-menu {
+	background-color: #fff;
+	padding: 30px;
+	min-width: 652px;
+	border-radius: 5px;
+}
+
+.sub-menu__sub-sub-menu {
+	position: absolute;
+	top: 12%;
+	left: 101%;
+	z-index: 5;
+
+	border: 0.5px solid #e7e7e7;
+	transition: all 450ms;
+	/* cкриває блок */
+	visibility: hidden;
+	opacity: 0;
+}
+
+.sub-menu__item:hover .sub-menu__sub-sub-menu {
+	/* при наведенні на пункт під-меню з'являється під-під-меню */
+	visibility: visible;
+	opacity: 1;
+}
+
+.sub-menu__sub-sub-menu::after {
+	/* псевдоелемент прокладка, щоб при переведенні миші з пункту меню не пропадало під-меню */
+	content: "";
+	position: absolute;
+	left: -35px;
+	top: 25px;
+	z-index: 4;
+
+	height: 10%;
+	width: 10%;
+}
+
+.sub-menu__sub-sub-menu::before {
+	/* псевдоелемент прокладка, щоб при збільщити площу взаємодії */
+	content: "";
+	position: absolute;
+	left: -1%;
+	top: -5%;
+	z-index: 4;
+
+	height: 110%;
+	width: 103%;
+}
+
+.sub-menu__sub-sub-menu > *:not(:last-child) {
+	/* відступи вправо від колонок */
+	margin-right: 80px;
+}
+
+.sub-sub-menu__column {
+	position: relative;
+	z-index: inherit;
+
+	display: inline-block;
+	vertical-align: top;
+	max-width: 116px;
+	line-height: 1.5;
+}
+
+.sub-menu .sub-sub-menu__heading {
+	margin-bottom: 20px;
+}
+
+.list-sub-sub-menu {
+}
+
+.sub-sub-menu__list {
+}
+
+.sub-sub-menu__list > *:not(:last-child) {
+	/* відступ між елементами списків у під-під меню */
+	margin-bottom: 12px;
+}
+
+.sub-menu .sub-sub-menu__column_margin-right {
+	/* відступ від колонки до зображення */
+	margin-right: 67px;
+	max-width: 107px;
+}
+
+.list-sub-sub-menu__item {
+	font-weight: 500;
+	color: #637381;
+}
+
+.list-sub-sub-menu__item:hover {
+	color: #3056d3;
+}
+
+.list-sub-sub-menu__link {
+}
+
+.image-block {
+}
+
+.sub-sub-menu__image-block {
+	max-width: 220px;
+	position: relative;
+	z-index: 6;
+}
+
+.image-block::after {
+	/* помаранчевий прозорий фон зображення */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+
+	width: 100%;
+	height: 100%;
+	background: rgba(205, 131, 90, 0.65);
+}
+
+.image-block__img {
+	max-width: 100%;
+}
+
+.image-block__text,
+.image-block__button {
+	position: absolute;
+	z-index: 6;
+}
+
+.image-block__text {
+	left: 45px;
+	top: 113px;
+
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.2;
+	color: #ffffff;
+	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
+}
+
+.image-block__text_big {
+	left: 66px;
+	top: 65px;
+
+	font-weight: 700;
+	font-size: 40px;
+	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.22);
+}
+
+.image-block__button {
+	left: 69px;
+	top: 158px;
+
+	font-weight: 700;
+	font-size: 11px;
+	line-height: 13px;
+	color: #ffffff;
+	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.14);
+
+	padding: 6px 14px;
+	background: #3056d3;
+	border-radius: 2px;
+
+	transition: all 250ms;
+}
+
+.image-block__button:hover {
+	background: #082fb0;
+}
+
+.image-block__button:active {
+	background: #062075;
+}
+/* під-під-меню */
+/* кнопка з випадаючим меню */
+
+/* навігаціне меню */
+.nav-menu {
+}
+
+.header__container .header__nav-menu {
+	/* відступ вправо від меню до іконок */
+	margin-right: 156px;
+}
+
+.nav-menu__list {
+}
+
+.header__container .nav-menu__list > *:not(:last-child) {
+	/* відступи між елементами меню */
+	margin-right: 35px;
+}
+
+.nav-menu__item {
+	/* щоб можна було позиціонувати випадаюче меню */
+	position: relative;
+	z-index: 5;
+}
+
+.nav-menu__link {
+	line-height: 1.18; /* 19/16 */
+	transition: 250ms all;
+}
+
+.nav-menu__link:hover {
+	color: #3056d3;
+}
+
+.nav-menu__link_arrow {
+}
+
+.nav-menu__link_arrow::after {
+	/* стрілочка */
+	content: "";
+	display: inline-block;
+	height: 5.9px;
+	width: 11.1px;
+	background: url(../img/icons/arrow-down.svg) no-repeat;
+	margin-left: 7px;
+	vertical-align: middle;
+}
+
+.nav-menu__link_arrow:hover:after {
+	/* зміна кольору стрілки */
+	background: url(../img/icons/arrow-down_hover.svg) no-repeat;
+}
+
+.nav-menu__sub-menu {
+	position: absolute;
+	left: 0;
+	top: 71px;
+	z-index: 5;
+
+	transition: all 250ms;
+}
+
+.nav-menu__item:hover .nav-menu__sub-menu {
+	/* поява підменю при наведенні мишою */
+	visibility: visible;
+	opacity: 1;
+}
+
+.nav-menu__sub-menu::after {
+	/* псевдоелемент підкладка */
+	content: "";
+	position: absolute;
+	top: -51px;
+}
+/* навігаціне меню */
+
+/* панель з  іконками */
+.icons-menu {
+}
+
+.header__icons-menu {
+}
+
+.header__icons-menu > *:not(:last-child) {
+	margin-right: 21.7px;
+}
+
+.icon {
+}
+
+.icons-menu__icon {
+	position: relative;
+	z-index: 5;
+}
+
+.icon__search {
+}
+
+.icon__favorites {
+}
+
+.icon__cart {
+}
+
+.icon__index {
+	/* кружечок з цифрою */
+	position: absolute;
+	top: -5px;
+	left: 15px;
+
+	height: 16px;
+	width: 16px;
+
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 1.18; /* 13/11 */
+	color: #ffffff;
+	background-color: #3056d3;
+	border-radius: 50%;
+
+	text-align: center;
+	padding-top: 1.5px;
+
+	z-index: 5;
+}
+/* панель з  іконками */
+
+.page {
+	background-color: #212b36;
+	font-weight: 400;
+	color: #f4f7ff;
+	padding-top: 150px;
+}
+
+.page__container > *:not(:last-child) {
+	margin-bottom: 35px;
+}
+
+.page .page__heading {
+	font-size: 28px;
+	font-weight: 500;
+	margin-bottom: 50px;
+}
+.example {
+}
+
+.example > *:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.example__block:nth-child(even) {
+	background-color: rgb(120, 111, 204);
+}
+
+.example__block:nth-child(odd) {
+	background-color: rgb(255, 166, 0);
+}
+
+.example_1 {
+}
+.example__text {
+}
+.example__code {
+	display: inline-block;
+	font-family: monospace;
+	font-size: 20px;
+	color: #750606;
+	background-color: #e7e7e7;
+	border-radius: 3px;
+	padding: 0px 5px;
+}
+.example__block {
+	width: 100%;
+	height: 50px;
+	border: 1px dashed rgb(192, 192, 192);
+}
+.block-1 {
+}
+.block-2 {
+	position: static;
+	top: 20px;
+	left: 50px;
+}
+.block-3 {
+}
+
+.block-4 {
+	position: relative;
+	z-index: 1;
+}
+.block-5 {
+	position: relative;
+	/* top: 10%; */
+	top: -25px;
+	left: 40px;
+	/* z-index: 1; */
+}
+.block-6 {
+	/* position: relative; */
+}
+
+.example_3 {
+	position: relative;
+}
+
+.block-7 {
+	position: relative;
+	z-index: 2;
+}
+.block-8 {
+	position: absolute;
+	top: 50%;
+	left: 490px;
+	width: 200px;
+	height: 100px;
+	z-index: 1;
+}
+.block-9 {
+}
+.block-10 {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 3;
+	height: auto;
+	width: auto;
+
+	border-radius: 15px;
+	text-align: center;
+}
+.block-11 {
+}
+.block-12 {
+}
+.block-13, 
+.block-14,
+.block-15 {
+	position: sticky;
+	top: 300px;
+	z-index: 2;
+	max-width: 60%;
+	text-align: right;
+	padding: 10px 20px 0 0;
+}
+.block-14 {
+	z-index: 1;
+	max-width: 80%;
+}
+.block-15 {
+	max-width: 100%;
+	z-index: 0;
+}

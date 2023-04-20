@@ -1,0 +1,708 @@
+@import url(reset.css);
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,700&display=swap");
+
+/* ======= */
+/* ======= */
+/* ======= */
+
+.vence {
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.67;
+	color: #e5e5e5;
+
+	background: url(../img/vence__background.jpg) 50% / cover no-repeat;
+}
+.vence__container {
+	max-width: 1270px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.vence__text-content {
+	max-width: 605px;
+	padding: 36px 0 100px;
+}
+
+.vence__text-content *:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.vence__text-content *:first-child {
+	/* для того щоб при перестановці конетнту був відступ у першого елементу */
+	margin-bottom: 269px;
+}
+
+.vence__header .vence__logo {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.39;
+	color: #f8f9fa;
+	text-transform: uppercase;
+}
+
+.vence__logo span {
+	color: #ddbea9;
+}
+
+.vence__title {
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 1.6;
+	color: #f8f9fa;
+}
+
+/* ======= */
+/* !===different layouts====! */
+/* ======= */
+
+.page__tail-grids {
+	font-family: "Inter", sans-serif;
+}
+.tail-grids {
+}
+.tail-grids__header {
+}
+
+.header {
+	background: linear-gradient(112deg, rgba(255, 255, 255, 0) 56%, rgba(48, 86, 211, 0.08) 56%),
+		linear-gradient(112deg, rgba(255, 255, 255, 0) 63%, rgba(48, 86, 211, 0.08) 63%), #f4f7ff;
+}
+
+.header__container {
+	max-width: 1200px; /* 1170 + 15*2 відступи безпеки*/
+	margin: 0 auto;
+	padding: 0 15px;
+
+	font-size: 0; /* прибирає фантомний відступ */
+}
+
+.header__text {
+	display: inline-block;
+	vertical-align: top; /* вирівнює  __text та __image по верху контейнера*/
+	max-width: 570px;
+
+	font-size: 16px; /* необхідно повернути розмір шрифту */
+	font-weight: 500;
+	line-height: 1.5;
+	color: #637381;
+
+	padding: 145px 0 146px;
+	margin-right: 179px;
+}
+
+/* блок із зображенням */
+.header__image {
+	display: inline-block;
+	font-size: 16px; /* треба повернути щоб було видно альтернативний текст */
+	padding: 81px 0px 83px;
+
+	max-width: 23.247863%; /* 272/1170 */
+}
+
+.header__image img {
+	max-width: 100%;
+	max-height: 396px;
+}
+/* блок із зображенням */
+
+/* ============ */
+
+/* відступи всередині блоку всім дочірнім елементам першого рівня вкладеності */
+/* на той випадок якщо порядок розміщення контенту буде змінено */
+.header__text > * {
+	margin-bottom: 15px;
+}
+
+/* робота з текстом */
+
+.header .header__blue-text {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.33;
+	color: #3056d3;
+
+	margin-bottom: 13px;
+}
+
+.header__title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.25;
+	color: #212b36;
+}
+
+.header p {
+	margin-bottom: 35px;
+}
+
+.header .header__button {
+	background: #3056d3;
+	border-radius: 30px;
+	padding: 10px 30px;
+	display: inline-block;
+
+	font-weight: 600;
+	line-height: 1.5;
+	color: #ffffff;
+
+	transition: all 0.2s;
+}
+/* робота з текстом */
+
+/* взаємодія з кпопкою */
+.header .header__button:hover {
+	background-color: #183fc0;
+}
+
+.header .header__button:focus {
+	background-color: #0d2881;
+}
+/* взаємодія з кпопкою */
+
+/* прибираємо останньому дочірньому елементу 1-го рівня вкладеності відступ */
+.header__text > *:last-child {
+	margin-bottom: 0;
+}
+
+/* списки */
+.tail-grids__lists {
+	max-width: 1175px; /* 1145 + 30 відступи безпеки */
+	margin: 0 auto;
+	padding: 50px 15px;
+
+	font-weight: 700;
+	line-height: 0.94;
+	color: #637381;
+}
+
+.tail-grids__lists > :not(:last-child) {
+	margin-bottom: 80px;
+}
+/* ======= */
+
+.list-block > :not(:last-child) {
+	margin-bottom: 40px;
+}
+
+/* ======= */
+
+.lists__title {
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 1.08;
+	color: #212b36;
+
+	margin-bottom: 45px;
+}
+
+.list-block li:not(:last-child) {
+	margin-bottom: 18px;
+}
+/* ======= */
+
+.list-block ol {
+	counter-reset: item;
+}
+
+/* загальні стилі для всіх пунктів впорядкованого списку */
+
+.list-block ol li {
+	margin-left: 35px;
+}
+
+ol > li::before {
+	content: " ";
+	display: inline-block;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.56; /* 25/16 */
+	color: #ffffff;
+	background-color: #3056d3;
+
+	text-align: center;
+	vertical-align: middle;
+
+	margin-right: 10px;
+	margin-left: -35px;
+
+	height: 25px;
+	width: 25px;
+}
+
+/* особливості стилю окремих списків */
+.ordered-1 li::before {
+	counter-increment: item;
+	content: counter(item);
+	border-radius: 50%;
+}
+
+.ordered-2 li::before {
+	counter-increment: item;
+	content: counter(item);
+	border-radius: 3px;
+}
+
+ol.ordered-3 li {
+	margin-left: 45.35px;
+}
+
+.ordered-3 li::before {
+	counter-increment: item;
+	content: counter(item);
+	margin-right: 10px;
+
+	height: 35.35px; /* довжина діагоналі квадрата зі стороною 25пх */
+	width: 35.35px; /* таким чином площа квадрату залишається незмінною */
+
+	margin-left: -45.35px;
+
+	line-height: 2.2; /* 35.35/16 */
+
+	background: url(../img/list-icon-rectangle.svg) 0 0 / contain no-repeat;
+}
+
+/* ======= */
+/* ======= */
+
+.unordered-1 li {
+	margin-left: 17px;
+}
+
+.unordered-1 li::before {
+	content: " ";
+	display: inline-block;
+
+	height: 8px;
+	width: 8px;
+
+	margin-right: 9px;
+	margin-left: -17px;
+	background: url(../img/icons/ul-01.svg) 0 0 / 8px 8px no-repeat;
+}
+
+/* ======= */
+
+.unordered-2 li,
+.unordered-3 li,
+.unordered-4 li {
+	margin-left: 30px;
+}
+
+.unordered-2 li::before,
+.unordered-3 li::before,
+.unordered-4 li::before {
+	content: "";
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+
+	vertical-align: middle;
+
+	margin-right: 10px;
+	margin-left: -30px;
+}
+
+/* ======= */
+
+.unordered-2 li::before {
+	background: url(../img/icons/ul-02.svg) no-repeat;
+}
+.unordered-3 li::before {
+	background: url(../img/icons/ul-03.svg) no-repeat;
+}
+.unordered-4 li::before {
+	background: url(../img/icons/ul-04.svg) no-repeat;
+}
+
+.unordered-5 li {
+	margin-left: 30px;
+}
+
+.unordered-5 li::before {
+	content: " ";
+	display: inline-block;
+	height: 8px;
+	width: 20px;
+
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-left: -30px;
+
+	background: url(../img/icons/ul-05.svg);
+}
+
+.unordered-6 li {
+	margin-left: 28px;
+}
+
+.unordered-6 li::before {
+	content: " ";
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+
+	vertical-align: bottom;
+	margin-right: 10px;
+	margin-left: -28px;
+
+	background: url(../img/icons/ul-06.svg);
+}
+
+.page__practice {
+	background-color: rgb(228, 251, 255);
+	padding: 80px 0 50px;
+
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	color: #444141;
+}
+
+.practice__container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.practice__container > *:not(:last-child) {
+	margin-bottom: 40px;
+}
+.page__practice p {
+	line-height: 1.2;
+}
+.example-1 {
+}
+
+[class*="example"] > *:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.practice__title {
+	color: #000;
+	font-weight: 600;
+	font-size: 32px;
+	text-decoration: underline;
+}
+h3.practice__title {
+	font-size: 24px;
+}
+
+h4.practice__title {
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.practice__container a {
+	display: inline-block;
+	color: #0d2881;
+	text-decoration: underline;
+	margin-bottom: 0;
+}
+
+.practice__container a:hover {
+	color: #183fc0;
+}
+
+.practice__container a:visited {
+	color: cadetblue;
+}
+
+.practice__container .example-1 .button,
+.practice__container .example-2 .button {
+	display: inline-block;
+	padding: 10px 15px;
+	margin-bottom: 25px;
+	background-color: #000000;
+	color: white;
+	border-radius: 20px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.463);
+	transition: all 0.1s;
+
+	margin-bottom: 0;
+}
+
+.example-1 .button:hover,
+.example-2 .button:hover {
+	background-color: #0d2881;
+	text-decoration: underline;
+}
+
+.example-2 .button:active {
+	background-color: #183fc0;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.463);
+}
+
+.example-3 a.example-3__link {
+	margin-bottom: 0;
+}
+
+.example-3 a:not(:last-of-type) {
+	margin-right: 30px;
+}
+
+.example-4__wrapper {
+	border: 2px dashed #0d2881;
+	padding: 10px;
+	border-radius: 10px;
+}
+.example-4 {
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s all;
+}
+.example-4__image {
+	max-width: 100%;
+}
+.example-4__list {
+}
+
+.example-4__list li {
+	line-height: 20px;
+	margin-left: 40px;
+}
+
+.example-4__list li::before {
+	content: "";
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-left: -40px;
+	background: url(../img/icons/ul-03.svg);
+}
+
+.example-4__wrapper:hover .example-4 {
+	visibility: visible;
+	opacity: 1;
+}
+
+.example-4__list li:hover::before {
+	content: "";
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-left: -40px;
+	background: url(../img/icons/ul-04.svg);
+}
+
+.example-5 {
+}
+.practice__container .example-5__link {
+	display: inline-block;
+}
+.example-5__button {
+	display: inline-block;
+	background-color: #fcd111;
+	font-size: 20px;
+	padding: 10px 15px;
+	border-radius: 25px;
+	margin-right: 15px;
+
+	transition: 0.3s all;
+}
+
+.example-5 .example-5__button:last-of-type {
+	margin-right: 0;
+}
+
+.example-5__button:hover {
+	background-color: #ffbd06;
+}
+
+.example-5__button:active {
+	background-color: #000000;
+	color: white;
+}
+
+.practice__container .example-5__link:focus,
+.example-5__button:focus {
+	background-color: black;
+	color: white;
+}
+
+.example-5 p:last-of-type {
+	margin-bottom: 30px;
+}
+
+.practice__container .example-6 {
+	margin-bottom: 80px;
+}
+
+.example-6__hidden-block-wrapper {
+	border: 2px dashed #000;
+	border-radius: 10px;
+}
+
+.practice__container .example-6__hidden-block {
+	padding: 10px 15px;
+	background: url(../img/vence__background.jpg) 0 0 / cover no-repeat;
+	color: white;
+	display: none;
+}
+
+.practice__container .example-6__hidden-block:target {
+	display: block;
+}
+
+[class*="span__box"] {
+	max-width: 580px;
+	font-size: 0;
+	margin: 0 auto;
+}
+
+[class*="span__box"] span {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: #0d2881;
+	margin-right: 20px;
+}
+
+[class*="span__box"] span:last-of-type {
+	margin-right: 0px;
+}
+
+.span__box-1 span:first-child,
+.span__box-2 span:first-child {
+	background-color: #ffbd06;
+}
+
+.span__box-3 span:first-child {
+	background-color: #ffbd06;
+}
+
+.span__box-4 span:last-child {
+	background-color: #ffbd06;
+}
+
+[class*="span__box"] p {
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.span__box-5 span:last-of-type {
+	background-color: #ffbd06;
+}
+
+.span__box-6 span:nth-child(3) {
+	background-color: #ffbd06;
+}
+
+.span__box-7 span:nth-child(odd) {
+	background-color: #ffbd06;
+}
+
+.span__box-8 span:nth-child(even) {
+	background-color: #ffbd06;
+}
+
+.span__box-9 span:nth-child(3n-2) {
+	background-color: #ffbd06;
+}
+
+.span__box-10 span:nth-child(n + 3) {
+	background-color: #ffbd06;
+}
+
+.example-13 {
+}
+.practice__title {
+}
+.example-13__list {
+}
+
+.example-13__list {
+	counter-reset: example;
+}
+
+.example-13__list li::before {
+	counter-increment: example;
+	content: counter(example) ")";
+	display: inline-block;
+	color: #000;
+	margin: 0;
+	background: none;
+
+	transition: all 0.3s;
+}
+
+.example-13__list li:hover,
+.example-13__list li:hover::before {
+	color: red;
+}
+
+.example-14__list li::before {
+	margin: 0;
+	background: none;
+}
+
+.example-14__list li::after {
+	content: "";
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+
+	margin-left: 15px;
+	vertical-align: middle;
+
+	border: 2px solid #0d2881;
+	border-radius: 50%;
+}
+
+.example-14__list li:hover:after {
+	height: 20px;
+	width: 20px;
+	border: 2px solid #ffbd06;
+}
+
+/* =========== */
+
+.test__container {
+	border: 2px dashed #000;
+	border-radius: 10px;
+	padding: 10px 15px;
+}
+
+/* !задаємо всім елементам першого рівня вкладеності загальний відступ */
+.test__container > * {
+	margin-bottom: 20px;
+}
+
+.test__container .test__title {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+/* !за потреби переписуємо стандартне значення */
+.test__container .test__link {
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.test__image {
+	max-width: 100%;
+	margin-bottom: 50px;
+}
+
+/* !ОБОВ'ЯЗКОВО задаємо відступ останньому елементу, так як при зміні положення від може стати не останнім, тому ми повинні передбачити для нього відступ */
+/* !якщо він стоїть останнім, то відступ обнулиться в кінцевому записі */
+.test__list {
+	margin-bottom: 15px;
+}
+
+.test__list li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+/* !в кінці обнулюємо нижній відступ для останнього елемента */
+/* !так як даний запис знаходиться нижче інших, він найбільш пріорітетний */
+/* !це означає, що навіть якщо елемент з заданим нижнім відступом вручну стане останнім, то його відступ буде змінено на 0*/
+.test__container > *:last-child {
+	margin-bottom: 0;
+}

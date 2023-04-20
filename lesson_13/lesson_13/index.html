@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 13. CSS transition & animation</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- ===== -->
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">Домашнє завдання #13</h1>
+				<div class="header__subtitle">Виконав Деордієв Дмитро</div>
+			</div>
+		</header>
+		<!-- ===== -->
+
+		<!-- ===== -->
+		<main class="page">
+			<div class="page__container">
+
+				<div class="page__section section">
+					<h2 class="section__title">Плавні переходи. CSS властивість transition</h2>
+					<div class="section__subtitle">
+						Плавні переходи дозволяють поліпшити нашу верстку та зробити її більш живою та елегантною
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">Об'єкт без властивості <span class="code">transition</span> змінюється
+							різко, що не приємно для
+							користувача</div>
+						<div class="example__object-parent">
+							<div class="example__square">
+								<span class="code-text"></span>
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							Властивіть <span class="code">transition-duration: 1000ms;</span> <br>
+							Усі властивості змінюються плавно за цей час
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_duration">
+							</div>
+						</div>
+					</div>
+
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-property: transform;</span> <br>
+							Завдяки цій властивості ми можемо обирати які властивості змінювати плавно. В цьому прикладі
+							border-raduis та background-color змінюються моментально.
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_property">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-delay: 300ms;</span> <br>
+							Затримка відтворення переходу
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_delay">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-time-function: ease;</span> <br>
+							Значення за замовченням. Властивіть впливає за те, як змінюються значення з часом
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_tf-ease">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-time-function: linear;</span>
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_tf-linear">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-timing-function: ease-in;</span>
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_tf-ease-in">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-timing-function: ease-out;</span>
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_tf-ease-out">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-timing-function: ease-in-out;</span>
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_tf-ease-in-out">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition-timing-function: cubic-bezier(0.78, -0.17, 0.53, 1.51);</span>
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_tf-cubic-bezier">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">
+							<span class="code">transition: border-radius, transform, background-color, 1000ms
+								cubic-bezier(0.19, 0.53, 0.64, 0.86) 200ms;</span> <br>
+							Універсальна властивсть. Порядок запису: property duration timing-function delay
+						</div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_universal">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">Приклад з зображенням</div>
+						<div class="example__object-parent">
+							<div class="example__image example__image_1">
+								<img src="img/bogomol.webp" alt="bogomol">
+							</div>
+							<div class="example__image example__image_2">
+								<img src="img/bogomol.webp" alt="bogomol">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__text">Можливо вказати різну поведінку для об'єкту під час наведенні мишою та
+							після її відведення. </div>
+						<div class="example__object-parent">
+							<div class="example__square example__square_hover">
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="page__section section">
+					<h2 class="section__title">Анімація. CSS властивість animation</h2>
+					<div class="section__subtitle">
+						Анімація - це дуже потужний інструмент, який дозволяє зробити верстку ще більш живою.
+						Анімовані об'єкти виглядають дуже круто, лише тоді, коли вони доречні, тож важливим аспектом є не
+						перенеситити ними свою сторінку
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__object-parent">
+							<div class="example__animation example__animation_1">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__object-parent">
+							<div class="example__animation example__animation_2">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__object-parent">
+							<div class="example__animation example__animation_3">
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__object-parent">
+							<div class="example__animation example__animation_4">
+								hover me
+							</div>
+						</div>
+					</div>
+
+					<!-- example -->
+					<div class="section__example example">
+						<div class="example__object-parent">
+							<div class="example__animation example__animation_5">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+		<!-- ===== -->
+		<div class="newton">
+			<div class="newton__base">
+				<div class="pendulum">
+					<div class="pendulum__item"></div>
+					<div class="pendulum__item"></div>
+					<div class="pendulum__item"></div>
+					<div class="pendulum__item"></div>
+				</div>
+			</div>
+		</div>
+		<!-- ===== -->
+		<div class="clouds">
+			<div class="left-cloud">
+				<img src="img/cloud-left.png" alt="cloud">
+			</div>
+			<div class="right-cloud">
+				<img src="img/cloud-right.png" alt="cloud">
+			</div>
+
+			<div class="moon"></div>
+			<div class="star star_1">
+				<img src="img/yellow-star.png" alt="star">
+			</div>
+			<div class="star star_2">
+				<img src="img/yellow-star.png" alt="star">
+			</div>
+			<div class="star star_3">
+				<img src="img/yellow-star.png" alt="star">
+			</div>
+			<div class="star star_4">
+				<img src="img/yellow-star.png" alt="star">
+			</div>
+			<div class="star star_5">
+				<img src="img/yellow-star.png" alt="star">
+			</div>
+		</div>
+		<!-- ===== -->
+
+		<div class="movie">
+			<h3 class="movie__title">Для перегляду наведіть мишою!</h3>
+			<!-- leopard -->
+			<div class="leopard">
+				<div class="catterpillar">
+					<div class="track track_1"></div>
+					<div class="track track_2"></div>
+					<div class="track track_3"></div>
+					<div class="track track_4"></div>
+					<div class="track track_5"></div>
+					<div class="track track_6"></div>
+					<div class="track track_7"></div>
+					<div class="track track_8"></div>
+				</div>
+				<div class="armor"></div>
+				<div class="turret">
+					<div class="triangle-1"></div>
+					<div class="triangle-2"></div>
+					<div class="triangle-3"></div>
+					<div class="triangle-4"></div>
+				</div>
+
+				<div class="cross-1"></div>
+				<div class="cross-2"></div>
+				<div class="tower"></div>
+
+				<div class="canon">
+					<div class="canon__barrel"></div>
+					<div class="canon__barrel-circle"></div>
+					<div class="canon__blob blob-canon">
+						<div class="blob-canon__shadow">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="chmnonya chmnonya_1">
+				<img src="img/chmonya.png" alt="chmonya">
+			</div>
+
+			<div class="chat-bubble chat-bubble_1">
+				Ваня, вот ето ми севодня улов собрали
+			</div>
+
+			<div class="chat-bubble chat-bubble_2">
+				А то! Как жена-то обрадуется
+			</div>
+
+			<div class="chat-bubble chat-bubble_3">
+				Не обрадуется)0))
+			</div>
+
+			<div class="chmnonya chmnonya_2">
+				<img src="img/chmonya.png" alt="chmonya">
+			</div>
+
+			<div class="chmnonya chmnonya_3">
+				<img src="img/chmonya-tv.png" alt="chmonya">
+			</div>
+
+			<div class="wheelbarrow">
+				<img src="img/wheelbarrow.png" alt="wheelbarrow">
+			</div>
+
+			<div class="ground"></div>
+			<!-- leopard -->
+
+			<div class="boom">
+				<img src="img/boom.png" alt="boom">
+			</div>
+
+			<div class="banner">
+				<span>СЛАВА УКРАЇНІ</span>
+			</div>
+		</div>
+
+
+
+		<!-- ===== -->
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+		<!-- ===== -->
+	</div>
+</body>
+
+</html>

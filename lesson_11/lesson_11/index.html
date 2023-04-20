@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 11. CSS positioning</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header wrapper__header">
+			<div class="header__container">
+				<div class="logo-header header__logo">
+					<img src="img/logo.svg" alt="TailGrids logo" class="logo-header__image">
+				</div>
+
+				<div class="button-header header__button">
+					<a href="" class="button-header__link">All categories</a>
+					<ul class="button-header__sub-menu sub-menu">
+						<li class="sub-menu__item">
+							<a href="#" class="sub-menu__link">Arts & Crafts</a>
+						</li>
+						<li class="sub-menu__item">
+							<a href="#" class="sub-menu__link sub-menu__link_arrow">Fashion</a>
+							<div class="sub-sub-menu sub-menu__sub-sub-menu">
+								<div class="sub-sub-menu__column">
+									<h2 class="sub-sub-menu__heading">New Arrivals</h2>
+									<ul class="list-sub-sub-menu sub-sub-menu__list">
+										<li class="list-sub-sub-menu__item"><a href="#"
+												class="list-sub-sub-menu__link">Dressess</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#"
+												class="list-sub-sub-menu__link">Jackets</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#"
+												class="list-sub-sub-menu__link">Sweatshirts</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#" class="list-sub-sub-menu__link">Tops &
+												Tees</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#" class="list-sub-sub-menu__link">Party
+												Dressess</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#"
+												class="list-sub-sub-menu__link">Electronics</a>
+										</li>
+									</ul>
+								</div>
+								<div class="sub-sub-menu__column sub-sub-menu__column_margin-right">
+									<h2 class="sub-sub-menu__heading">Trending</h2>
+									<ul class="list-sub-sub-menu sub-sub-menu__list">
+										<li class="list-sub-sub-menu__item"><a href="#" class="list-sub-sub-menu__link">Pants</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#"
+												class="list-sub-sub-menu__link">Accessories</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#" class="list-sub-sub-menu__link">Tops &
+												Tees</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#" class="list-sub-sub-menu__link">Casual
+												Shorts</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#" class="list-sub-sub-menu__link">Jeans</a>
+										</li>
+										<li class="list-sub-sub-menu__item"><a href="#"
+												class="list-sub-sub-menu__link">Electronics</a>
+										</li>
+									</ul>
+								</div>
+								<div class="sub-sub-menu__image-block image-block">
+									<img src="img/product.webp" alt="sweater" class="image-block__img">
+									<div class="image-block__text image-block__text_big">50%</div>
+									<div class="image-block__text">Flat Discount</div>
+									<a href="" class="image-block__button">Shop Now</a>
+								</div>
+							</div>
+						</li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Bages & Shoes</a></li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Jewelry & Watch</a></li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Beauty & Health</a></li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Electronics</a></li>
+					</ul>
+				</div>
+
+				<div class="nav-menu header__nav-menu">
+					<ul class="nav-menu__list">
+						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Home</a></li>
+						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Shop</a></li>
+
+						<li class="nav-menu__item">
+							<a href="#" class="nav-menu__link nav-menu__link_arrow">Products</a>
+							<ul class="nav-menu__sub-menu sub-menu">
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Arts & Crafts</a>
+								</li>
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Fashion</a>
+								</li>
+								<li class="sub-menu__item"><a href="#" class="sub-menu__link">Bages & Shoes</a></li>
+								<li class="sub-menu__item"><a href="#" class="sub-menu__link">Jewelry & Watch</a></li>
+								<li class="sub-menu__item"><a href="#" class="sub-menu__link">Beauty & Health</a></li>
+								<li class="sub-menu__item"><a href="#" class="sub-menu__link">Electronics</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Accessories</a></li>
+						<li class="nav-menu__item"><a href="#" class="nav-menu__link">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="icons-menu header__icons-menu">
+					<div class="icon icons-menu__icon">
+						<img src="img/icons/search.svg" alt="search" class="icon__search">
+					</div>
+					<div class="icon icons-menu__icon">
+						<img src="img/icons/favorites.svg" alt="favorites" class="icon__favorites">
+						<span class="icon__index">3</span>
+					</div>
+					<div class="icon icons-menu__icon">
+						<img src="img/icons/cart.svg" alt="cart" class="icon__cart">
+						<span class="icon__index">1</span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<h1 class="page__heading">Homework #11 by Dmytro Deordiiev</h1>
+
+				<div class="example example_1">
+					<p class="example__text"><span class="example__code">position: static</span> - це значення властивості за
+						замовченням. Для елемента на працюють властивості позиціонування</p>
+					<div class="example__block block-1"></div>
+					<div class="example__block block-2"></div>
+					<div class="example__block block-3"></div>
+				</div>
+
+				<div class="example example_2">
+					<p class="example__text"><span class="example__code">position: relative</span> - позиціонування відносно
+						положення елементу у кодію. Працюють всі властивості позиціонування. Відсоток від висоти при
+						позиціонуванні по вертикалі береться тільки в тому випадку, якщо у батьківського елемента однозначано
+						задана висота. Відносне позиціонування не
+						впливає на оточуючі об'єкти, за блоком зберігається його місце, він збергіає свою блочну природу. Якщо
+						для інших елементів стоїть <span class="example__code">position</span> за замовченням, то блок з
+						позиціонуванням буде перекривати їх. Якщо в сусідніх об'єктів задана властивість <span
+							class="example__code">position</span> зі значенням відмінним від <span
+							class="example__code">static</span>, то за однакових умов (<span
+							class="example__code">z-index</span> однаковий або
+						стоїть за замовченням) ближчим (вищим по осі z) буде той об'єкт, який знаходиться нижче у коді.
+						Значення <span class="example__code">z-index</span> за замовченням дорівнює 0</p>
+					<div class="example__block block-4"></div>
+					<div class="example__block block-5"></div>
+					<div class="example__block block-6"></div>
+				</div>
+
+				<div class="example example_3">
+					<p class="example__text"><span class="example__code">position: absolute</span> - абсолютне
+						позиціонування. Блок позиціонується відносно першого батьківського блоку зі значенням <span
+							class="example__code">position</span> відмінним від <span class="example__code">static</span>.
+						Елемент втрачає свою блочну сутність, та зарезервоване під нього місце. Задавати <span
+							class="example__code">display</span> для такого елементу немає жодного сенсу. Відсоток від висоти в
+						цьому випадку береться від висоти батьківскього елементу, навіть, якщо вона не задана явно. Так як
+						блок впливає на розміщення сусідніх об'єктів, то задавати БЕМ-блоку позиціонування з таким значенням
+						не можна.
+					</p>
+					<div class="example__block block-7"></div>
+					<div class="example__block block-8"></div>
+					<div class="example__block block-9"></div>
+				</div>
+				<div class="example example_4">
+					<p class="example__text"><span class="example__code">position: absolute</span> - фіксоване
+						позиціонування. Елемент завжи позиціонується відносно вікна браузера - вьюпорта. Так само блок втрачає
+						свою сутність і зарезервоване місце у потоці зникає. Не можна задавати БЕМ-блокамю. Завжди
+						використовуємо додаткові властивості позиціонування в купі. Прикладом фіксованого позиціонування є
+						шапка даного сайту. Вона має постійне фіксоване положення, яке не залежить від скролу</p>
+					<div class="example__block block-10">я фіксований елемент! </div>
+					<div class="example__block block-11"></div>
+					<div class="example__block block-12"></div>
+				</div>
+				<div class="example example_5">
+					<p class="example__text"><span class="example__code">position: sticky</span>Гібрид статичного і
+						фіксованого позиціонування. До того як до елементу дійде скрол, об'єкт веде себе як статично. Після
+						того як скрол досягне точки вказаної при позиціонуванні об'єкт "прилипне" до вьюпорту. Працює тільки в
+						середині свого батьківскього блоку!</p>
+					<div class="example__block block-13">блок 1</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod adipisci laboriosam animi ea in fuga
+						id,
+						facilis quisquam! Reprehenderit impedit, dignissimos commodi numquam modi beatae laboriosam rem.
+						Cumque
+						blanditiis ad in numquam cupiditate ut porro ullam amet architecto atque, dignissimos deleniti
+						expedita
+						fuga consequatur magni quam officiis id nam illo nulla corrupti, quidem, aliquid similique culpa.
+						Error
+						dolor quis repellat tempore quibusdam quia neque sit, est possimus impedit nihil animi eaque fuga
+						molestiae ipsam. Autem harum porro maxime! Quam alias molestias excepturi voluptate harum architecto
+						reiciendis in, iure iusto molestiae laudantium sit, quia facere. Voluptatum in quo eligendi autem
+						ducimus
+						debitis necessitatibus corporis quaerat iure, accusantium commodi saepe asperiores rem, iste laborum
+						quod
+						est harum velit praesentium. Natus officia sint blanditiis voluptatibus quidem iusto reprehenderit
+						assumenda animi ex ea deleniti doloremque ab accusamus itaque velit accusantium, quae eligendi quas
+						cumque sunt, libero ipsum. Perferendis explicabo recusandae deleniti ipsam, at ullam maxime eum.
+						Accusantium accusamus, veritatis quis pariatur, nulla perferendis unde labore repudiandae ullam
+						dignissimos fugit earum voluptate nihil et iste mollitia est, adipisci laboriosam repellendus
+						asperiores!
+						Iusto, amet. Laboriosam quia eligendi, eius enim placeat dignissimos ea beatae totam architecto
+						voluptatibus obcaecati repellat nisi perspiciatis minus quam praesentium exercitationem alias, rem
+						velit?
+						Alias quaerat neque perferendis assumenda labore voluptatem aliquam veritatis inventore non in sequi
+						reprehenderit, harum iure tempora, adipisci quam incidunt rerum. Similique dolores quas, quaerat illum
+						laboriosam nemo aspernatur ipsum minima labore ducimus laudantium optio! Expedita harum dolore
+						quibusdam
+						fugit neque cum aliquam, eos aut consequuntur magni blanditiis facilis recusandae eaque adipisci
+						possimus
+						molestias ab at doloribus modi assumenda dolores eveniet aperiam nulla consectetur. Laborum, nemo
+						ipsum
+						dignissimos eos dolore deleniti, reprehenderit dolores itaque quam praesentium minus perferendis
+						cumque
+						excepturi cum mollitia? Inventore quaerat in cumque. Autem voluptatibus doloribus accusamus illum
+						natus
+					</p>
+					<div class="example__block block-14">блок 2</div>
+					<p> tenetur aperiam voluptas harum, blanditiis quo beatae facilis accusantium eligendi voluptates odit
+						deserunt in id modi inventore repellat vero quas sequi perferendis commodi. Enim sit assumenda itaque
+						libero nulla quisquam quae soluta odio quia distinctio voluptate error quaerat fugit rerum sapiente,
+						quasi cupiditate illo pariatur omnis consequatur repellat vel! Animi, maxime quidem! Eveniet quod
+
+						labore,
+						consectetur ut totam vel odit dignissimos doloremque id, dolor nihil aliquid, earum impedit delectus
+						amet
+						minus corporis ducimus recusandae esse. Dicta officiis ea architecto minima nam, quas illum. Maiores
+						deleniti ullam temporibus itaque labore, non dignissimos quas doloremque provident facere consectetur
+						cumque ipsum magnam eos animi laborum, molestias, unde aperiam! Nihil quia quisquam eos minus eligendi
+						quo expedita, ab nobis eaque molestiae aliquam totam sunt, amet nesciunt impedit error a quidem
+						deleniti
+						mollitia, ut esse? Consequuntur ex commodi nam! Illo excepturi magnam dolore sequi aperiam alias!
+						Cupiditate illum molestiae itaque, doloremque ipsum tenetur dolor fuga repellat fugiat eaque vero
+						deserunt iusto laudantium eveniet, vitae aut saepe! Rerum enim possimus iure laboriosam vero. Qui
+						laborum, aliquid delectus itaque ipsam adipisci ex cumque quis sit officiis quaerat minima asperiores
+						distinctio suscipit voluptates libero voluptatem nulla reprehenderit voluptatum perferendis velit
+						iusto.
+						Harum molestiae obcaecati ratione! Debitis ipsam praesentium nesciunt nobis repellendus ad laudantium,
+						omnis labore.</p>
+
+					<div class="example__block block-15">блок 3</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, deleniti quo quae soluta odio, culpa
+						quaerat unde, velit iure laborum cum quia quidem numquam rem cumque incidunt officiis atque autem
+						dolore.
+						Fuga magnam minima repudiandae veniam voluptatum sit aperiam, reiciendis iure voluptatibus neque animi
+						quia vitae earum repellendus omnis minus, consectetur autem enim aspernatur! Temporibus deserunt quo,
+						tenetur labore maiores, totam culpa fuga, magni perspiciatis beatae enim pariatur dolorum repellat.
+						Consequatur ad a ea magnam voluptatibus! Aut error harum est quod, laboriosam quae doloribus dolore
+						beatae nam fugiat asperiores animi voluptatibus, dolores dolorum. Fuga minus voluptas nemo, laudantium
+						molestiae voluptatum labore tempora sapiente asperiores unde. Necessitatibus illum eligendi excepturi,
+						numquam possimus cumque quos sit earum officiis voluptatem a, velit recusandae perspiciatis
+						consequatur
+						accusamus expedita maiores. Inventore culpa unde aliquam et magni repellendus. Quas, illo! Facilis
+						magni
+						eveniet quos in aliquam voluptatum, molestiae sint amet! Quo fuga quis molestias natus omnis tenetur
+						placeat commodi sed saepe minus, quibusdam nostrum molestiae sequi, delectus a fugiat nesciunt quos
+						cumque odio pariatur unde quasi aperiam quod suscipit. Repellat repellendus nisi iusto reprehenderit
+						mollitia esse. Nostrum, omnis. Repellendus nobis doloribus earum dolorem distinctio rerum
+						necessitatibus
+						iure consectetur. Placeat vitae nihil eum nisi. Quasi, perferendis iusto.</p>
+				</div>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, autem eaque. Dolores sunt
+					praesentium ullam molestias culpa minus quam rerum iste nulla! Repellendus, qui temporibus distinctio
+					delectus beatae eaque suscipit, impedit fuga mollitia perferendis incidunt adipisci ad exercitationem!
+					Ipsa, nostrum aut, inventore omnis optio porro rerum nisi illum vero sit maxime iure. Dicta, dolores
+					quod
+					ad consequatur vero, id ut dolorem veritatis minus repellendus obcaecati. Animi aperiam voluptatibus
+					magnam adipisci praesentium delectus rerum iste a ut? Corrupti quas et doloremque in libero eveniet
+					iure
+					suscipit at voluptatem atque, quo facere possimus! Suscipit exercitationem recusandae aperiam
+					voluptatem
+					tempora quisquam quae magnam sint consectetur, vitae expedita architecto, itaque aliquam eius fuga
+					reiciendis natus eos placeat mollitia temporibus? Saepe recusandae sunt maiores facere laborum
+					voluptas
+					illum itaque fugit hic vel tenetur impedit quos, enim consequuntur nisi vitae quae minus quasi
+					adipisci
+					magni rem? Est eum eligendi odit nulla dolor cupiditate. Assumenda sit dignissimos dolores non quod
+					explicabo cupiditate sapiente, ut optio dolor illum provident fuga officiis, pariatur voluptate nihil
+					ipsa blanditiis. Fuga, unde blanditiis ipsam necessitatibus magnam recusandae expedita quasi quidem?
+					Harum perspiciatis recusandae dolorum qui ipsum voluptates, possimus placeat eveniet praesentium magni
+					a
+					inventore et quam quae eos architecto eum, unde ullam.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum autem vel deserunt praesentium tenetur,
+					exercitationem odit eum voluptates esse sed, minima animi ullam eos. Libero tempore minus ab doloremque
+					quisquam ad aperiam necessitatibus adipisci reprehenderit deleniti nesciunt voluptatum soluta dicta,
+					dolores unde consectetur natus corrupti. Optio totam deserunt enim placeat quisquam earum rerum corrupti
+					provident cumque voluptatibus minima, voluptatem necessitatibus ea laboriosam laudantium voluptas error
+					assumenda minus quae, id consectetur. Magni et ea fuga, aspernatur repellat omnis dignissimos obcaecati
+					cum, saepe culpa aliquid temporibus totam voluptate. Nam illo nemo quisquam, tempora beatae aspernatur
+					quo fugiat deserunt, incidunt possimus non aliquam.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, qui vel repellendus quasi omnis quae
+					odio minus odit doloremque architecto repellat ut corporis in sequi dicta hic, facilis dolorem culpa
+					consequatur reprehenderit sapiente rerum iure ea quis? Magnam, expedita sed, modi adipisci id laboriosam
+					quos at delectus velit quis numquam quo odit. Culpa totam quam error iste inventore obcaecati distinctio,
+					quae mollitia facere doloremque consequuntur accusantium provident voluptatem sunt recusandae, maiores
+					impedit at blanditiis, delectus temporibus cum? Quia sit eos harum obcaecati dignissimos perspiciatis
+					eligendi quas atque mollitia dolores ab, dolorum vel. Aliquam dicta quas dolore error odio eveniet velit
+					ducimus vero. Ullam iste temporibus, optio impedit, sapiente inventore autem ad provident explicabo totam
+					quo earum magnam aliquid atque nulla et hic, voluptatibus esse sequi rerum dignissimos? Aut modi maiores
+					in asperiores eum cum iste explicabo quisquam sint debitis harum, est mollitia obcaecati fuga corrupti
+					animi necessitatibus itaque, laudantium quod neque minus optio deserunt dicta. Recusandae, possimus
+					molestias ex tenetur aliquam labore culpa vitae quia itaque non doloribus odit officiis. Nulla numquam
+					molestias corrupti cupiditate quo provident excepturi! Harum nobis vel architecto, exercitationem culpa
+					quo molestiae ullam quaerat, tempore eaque maxime sapiente odio minus placeat quod id at, doloremque
+					sint!</p>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>

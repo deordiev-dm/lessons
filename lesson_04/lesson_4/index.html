@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Font & text</title>
+	<!-- підключення шрифту через HTML -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<p class="header__text">
+			Text was taken from <a
+				href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+				target="_blank">MDN's article</a> in learning purposes only
+		</p>
+	</header>
+
+	<br>
+	<br>
+
+	<main class="page">
+
+		<div class="page__header">
+			<h1 class="page__title title">HTML text fundamentals</h1>
+			<p class="example-1">
+				One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its
+				developer intends. This article explains the way HTML can be used to structure a page of text by adding
+				headings and paragraphs, emphasizing words, creating lists, and more.
+			</p>
+		</div>
+
+		<div class="page__section section">
+			<h2 class="section__title title">The basics: headings and paragraphs</h2>
+			<p class="example-2">
+				Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a
+				college textbook, a magazine, etc.Most structured text consists of headings and paragraphs, whether you are
+				reading a story, a newspaper, a college textbook, a magazine, etc.
+			</p>
+
+			<img src="img/newspaper_small.jpg" alt="an old newspaper" class="section__image" width="250">
+
+			<p class="example-3">Structured content makes the reading experience easier and more enjoyable.</p>
+
+			<p class="example-4">In HTML, each paragraph has to be wrapped in a <span>&lt;p&gt;</span> element</p>
+
+			<p class="example-5">Each heading has to be wrapped in a heading element</p>
+
+			<p class="example-6">
+				There are six heading elements: <span>&lt;h1&gt;</span>, <span>&lt;h2&gt;</span>, <span>&lt;h3&gt;</span>,
+				<span>&lt;h4&gt;</span>, <span>&lt;h5&gt;</span>, and <span>&lt;h6&gt;</span>.
+				Each element represents a different level of content in
+				the document; <span>&lt;h1&gt;</span> represents the main heading, <span>&lt;h2&gt;</span> represents
+				subheadings, <span>&lt;h3&gt;</span>
+				represents sub-subheadings, and so on.
+			</p>
+
+			<br>
+
+			<div class="section__subsection subsection">
+				<h3 class="subsection__title title">Implementing structural hierarchy</h3>
+				<p class="example-7">
+					It's really up to you what the elements involved represent, as long as the hierarchy makes sense. You
+					just need to bear in mind a few best practices as you create such structures:
+				</p>
+				<ul class="subsection__list list">
+					<li class="example-8">
+						Preferably, you should use a single <span>&lt;h1&gt;</span> per page—this is the top level heading,
+						and all others
+						sit below this in the hierarchy.
+					</li>
+					<li class="example-9">Make sure you use the headings in the correct order in the hierarchy. Don't use
+						<span>&lt;h3&gt;</span> elements
+						to represent subheadings, followed by <span>&lt;h2&gt;</span> elements to represent
+						sub-subheadings—that doesn't
+						make sense and will lead to weird results.
+					</li>
+					<li>
+						Of the six heading levels available, you should aim to use no more than three per page, unless you
+						feel it is necessary. Documents with many levels (for example, a deep heading hierarchy) become
+						unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over
+						multiple pages if possible.
+					</li>
+				</ul>
+			</div>
+
+			<br>
+
+			<div class="section__subsection subsection">
+				<h3 class="subsection__title title">Why do we need structure?</h3>
+				<ul class="subsection__list list">
+					<li class="example-10">
+						Users looking at a web page tend to scan quickly to find relevant content, often just reading the
+						headings, to begin with. (We usually spend a very short time on a web page.) If they can't see
+						anything useful within a few seconds, they'll likely get frustrated and go somewhere else.
+					</li>
+					<li class="example-11">
+						Search engines indexing your page consider the contents of headings as important keywords for
+						influencing the page's search rankings. Without headings, your page will perform poorly in terms of
+						SEO (Search Engine Optimization).
+					</li>
+					<li class="example-12">
+						Severely visually impaired people often don't read web pages; they listen to them instead. This is
+						done with
+						software called a screen reader. This software provides ways to get fast access to given text content.
+						Among the various techniques used, they provide an outline of the document by reading out the
+						headings,
+						allowing their users to find the information they need quickly. If headings are not available, they
+						will be
+						forced to listen to the whole document read out loud.
+					</li>
+					<li class="example-13">
+						To style content with CSS, or make it do interesting things with JavaScript, you need to have elements
+						wrapping the relevant content, so CSS/JavaScript can effectively target it.
+					</li>
+				</ul>
+				<p>
+					Therefore, we need to give our content structural markup.
+				</p>
+			</div>
+
+			<br>
+
+			<div class="section__subsection subsection">
+				<h3 class="subsection__title title">Why do we need semantics?</h3>
+				<p>
+					Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function
+					of an everyday object is; when we see something, we know what its function will be. So, for example, we
+					expect
+					a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very
+					quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)
+				</p>
+
+				<p>
+					In a similar way, we need to make sure we are using the correct elements, giving our content the correct
+					meaning, function, or appearance. In this context, the <span>&lt;h1&gt;</span> element is also a semantic
+					element,
+					which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
+				</p>
+
+				<p>
+					By default, the browser will give it a large font size to make it look like a heading (although you could
+					style it to look like anything you wanted using CSS). More importantly, its semantic value will be used
+					in multiple ways, for example by search engines and screen readers (as mentioned above).
+				</p>
+
+				<p>
+					This is a <span>&lt;span&gt;</span> element. It has no semantics. You use it to wrap content when you
+					want to apply
+					CSS to it (or do something to it with JavaScript) without giving it any extra meaning. (You'll find out
+					more about these later on in the course.) We've applied some CSS to it to make it look like a top level
+					heading, but since it has no semantic value, it will not get any of the extra benefits described above.
+					It is a good idea to use the relevant HTML element for the job.
+				</p>
+			</div>
+
+		</div>
+
+	</main>
+
+	<br>
+	<br>
+
+	<footer class="footer">
+		<p>
+			Lesson 4. Homework. Made by Dmytro Deordiiev, 2023
+		</p>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 12. CSS transform</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+
+			<!-- !відпрацювання властивостей -->
+			<div class="practice">
+				<div class="practice__container">
+					<h1 class="practice__title">Домашнє завдання №12</h1>
+					<div class="practice__subtitle">Виконав Деордієв Дмитро</div>
+
+
+					<div class="practice__content content">
+						<h2 class="content__title">
+							Трансформування об'єктів допомагає вирішувати багато
+							дизайнерських задач. Від позиціонування об'єктів до створення крутих анімацій
+						</h2>
+
+						<!-- !translate -->
+						<div class="content__translate translate">
+							<h3 class="translate__title">Властивіть transform зі значенням translate переносить об'єкт вздовж
+								вісей X, Y</h3>
+
+							<div class="translate__object-wrapper">
+								<div class="translate__example-1">
+									<span class="code">transform: translate(50px);</span>
+									<p>Зсув ніяк не впливає на оточення</p>
+								</div>
+							</div>
+
+							<div class="translate__object-wrapper">
+								<div class="translate__example-2">
+									<span class="code">transform: translate(10px, -20px);</span>
+									<p>
+										Елемент що йде нижче по коду буде ближчим до користувача по вісі Z (буде накривати собою
+										інші об'єкти)
+									</p>
+								</div>
+							</div>
+
+							<div class="translate__object-wrapper">
+								<div class="translate__example-3">
+									<span class="code">transform: translate(-5%, 25%);</span>
+									<p>Відсоток береться від розмірів об'єкту, а не від розмірів батьківського елементу</p>
+								</div>
+							</div>
+
+							<div class="translate__object-wrapper">
+								<div class="translate__example-4">
+									<span class="code">transform: translateX(50px);</span>
+								</div>
+							</div>
+
+							<div class="translate__object-wrapper">
+								<div class="translate__example-5">
+									<span class="code">transform: translateY(20px);</span>
+								</div>
+							</div>
+						</div>
+						<!-- !translate -->
+
+						<!-- !scale -->
+						<div class="content__scale scale">
+							<h3 class="scale__title">Властивіть transform зі значенням scale масштабує об'єкти</h3>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-1">
+									<span class="code">transform: scale(1.1);</span>
+									<p>
+										Функція приймає значення коефецієнту на який множиться вектор (прям як у шкільній
+										програмі)
+									</p>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-2">
+									<span class="code">transform: scale(1.1, 1.5);</span>
+									<p>Помітьте як даний об'єкт накриває собою попередній, але ховається під наступний</p>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-3">
+									<span class="code">transform: scale(20px);</span>
+									<p>Ні, пікселі не працюють</p>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-4">
+									<span class="code">transform: scale(115%);</span>
+									<p>А відсотки - так! Хоча валідатор свариться, тож краще так не робити!</p>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-5">
+									<span class="code">transform: scaleX(1.3);</span>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-6">
+									<span class="code">transform: scaleY(1.5);</span>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-7">
+									<span class="code">transform: scale(0.9);</span>
+									<p>При множенні вектора на число менше одиниці - його довжина зменшується, а напрям не
+										змінюється</p>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-8">
+									<span class="code">transform: scale(0);</span>
+									<p>Доволі логічно</p>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-9">
+									<span class="code">transform: scale(-0.5);</span>
+									<p>
+										При множенні вектора на від'ємне число він змінює свій напрям. При множенні вектора на
+										число
+										менше одиниці - його довжина зменшується
+									</p>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-10">
+									<span class="code">transform: scale(-1, 1);</span>
+								</div>
+							</div>
+
+							<div class="scale__object-wrapper">
+								<div class="scale__example-11">
+									<span class="code">transform: scale(1, -1);</span>
+								</div>
+							</div>
+
+						</div>
+						<!-- !scale -->
+
+						<!-- !rotate -->
+						<div class="content__rotate rotate">
+							<h3 class="rotate__title">Властивіть transform зі значенням rotate обертає об'єкт</h3>
+
+							<div class="rotate__object-wrapper">
+								<div class="rotate__example-1">
+									<span class="code">transform: rotate(45deg);</span>
+									<p>
+										Додатні кути обертають об'єкт за годинниковою стрілкою
+									</p>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+								<div class="rotate__example-2">
+									<span class="code">transform: rotate(-45deg);</span>
+									<p>
+										Від'ємні кути обертають об'єкт проти годинникової стрілки
+									</p>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+								<div class="rotate__example-3">
+									<span class="code">transform: rotateX(60deg);</span>
+									<p>
+										Об'єкт можна обертати навколо координатних вісей. Але це працює ліпше з 3D-трансформаціями
+										(ничже)
+									</p>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+								<div class="rotate__example-4">
+									<span class="code">transform: rotateY(60deg);</span>
+									<p>
+										Зараз об'єкт обертається навколо вісі Y, але ми бачимо лише пласку проекцію, тому що зараз
+										не ввімкнена глибина площини z
+									</p>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+								<div class="rotate__example-5">
+									<span class="code">transform: rotate(200px);</span>
+									<p>
+										Так як це оберт, то вказувати треба кути, а не пікселі чи будь-які інші одиниці
+										вимірювання довжини
+									</p>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+								<div class="rotate__example-6">
+									<span class="code">transform: rotate(2rad);</span>
+									<p>
+										Наприклад, можна вказати такі одиниці вимірювання кутів як радіани чи гради
+									</p>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+								<div class="rotate__example-7">
+									<span class="code">transform: rotate(-100grad);</span>
+									<p>100 градів = 90 градусів</p>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+							</div>
+							<div class="rotate__object-wrapper">
+
+								<div class="rotate__example-8">
+									<span class="code">transform: rotate(-180deg);</span>
+								</div>
+							</div>
+							<div class="rotate__object-wrapper">
+							</div>
+							<!-- !rotate -->
+
+						</div>
+						<!-- !rotate -->
+
+						<!-- !skew -->
+						<div class="content__skew skew">
+							<h3 class="skew__title">Властивіть transform зі значенням skew нахиляє об'єкт</h3>
+
+							<div class="skew__object-wrapper">
+								<div class="skew__example-1">
+									<span class="code">transform: skew(15deg);</span>
+								</div>
+							</div>
+							<div class="skew__object-wrapper">
+								<div class="skew__example-2">
+									<span class="code">transform: skew(20deg, 0deg);</span>
+								</div>
+							</div>
+							<div class="skew__object-wrapper">
+								<div class="skew__example-3">
+									<span class="code">transform: skew(0deg, 20deg);</span>
+								</div>
+							</div>
+							<div class="skew__object-wrapper">
+								<div class="skew__example-4">
+									<span class="code">transform: skew(-15deg, 20deg);</span>
+								</div>
+							</div>
+						</div>
+						<!-- !skew -->
+
+						<!-- !multiple -->
+						<div class="content__multiple-2d multiple-2d">
+							<h3 class="multiple-2d__title">Для більш складних анімацій та ефектів можна поєднувати декілька
+								2D-трансформацій для одного об'єкту</h3>
+
+							<div class="multiple-2d__object-wrapper">
+								<div class="multiple-2d__example-1">
+									<span class="code">transform: translate(-100px, 10px) rotate(12deg);</span>
+									<p>
+									</p>
+								</div>
+							</div>
+
+							<div class="multiple-2d__object-wrapper">
+								<div class="multiple-2d__example-2">
+									<span class="code">skew(20deg) scale(-1, 1) rotate(20deg);</span>
+									<p>
+									</p>
+								</div>
+							</div>
+
+							<div class="multiple-2d__object-wrapper">
+								<div class="multiple-2d__example-3">
+									<span class="code">scale(1.1) translate(50px, 0px);</span>
+									<p>
+									</p>
+								</div>
+							</div>
+
+							<div class="multiple-2d__object-wrapper">
+								<div class="multiple-2d__example-4">
+									<span class="code">scale(0.99) translate(0px, -2px) rotate(1deg);</span>
+									<p>
+									</p>
+								</div>
+							</div>
+
+							<div class="multiple-2d__object-wrapper">
+								<div class="multiple-2d__example-5">
+									<span class="code">rotate(360deg) scale(0.5);</span>
+									<p>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- !multiple -->
+
+						<!-- !transform-origin -->
+						<div class="content__transform-origin transform-origin">
+							<h3 class="transform-origin__title">Властивіть transform-origin впливає на те, від якої точки
+								починається трансформація.</h3>
+
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-1">
+									<span class="code">rotate(30deg);</span>
+									<p>
+										Без використання transform-origin. За замовченням значення дорівнює 50% 50%
+									</p>
+								</div>
+
+							</div>
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-2">
+									<span class="code">rotate(30deg);</span>
+									<span class="code">transform-origin: left top;</span>
+								</div>
+							</div>
+
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-3">
+									<span class="code">transform: scale(0.7);</span>
+								</div>
+							</div>
+
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-4">
+									<span class="code">transform-origin: -30% 150%;</span>
+									<span class="code">transform: scale(0.7);</span>
+								</div>
+							</div>
+
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-5">
+									<span class="code">transform: translate(20%, 10%);</span>
+								</div>
+							</div>
+
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-6">
+									<span class="code">transform: translate(20%, 10%);</span>
+									<span class="code">transform-origin: 10px 100px;</span>
+
+									<p>
+										Нема різниці яку точку об'єкта переміщати, бо при паралельному перенесенні всі точки
+										зміщуються на однаковий вектор.
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-7">
+									<span class="code">transform: skew(-10deg);</span>
+								</div>
+							</div>
+
+							<div class="transform-origin__object-wrapper">
+								<div class="transform-origin__example-8">
+									<span class="code">transform: skew(-10deg);</span>
+									<span class="code">transform-origin: 0% 0%;</span>
+								</div>
+							</div>
+
+						</div>
+						<!-- !transform-origin -->
+
+						<!-- !transform-3d -->
+						<div class="content__transform-3d transform-3d">
+							<h3 class="transform-3d__title">Окрім пласкої 2d трансформації в нашому арсеналі наявні інструменти
+								для створення об'ємних перетворень об'єктів</h3>
+
+							<div class="transform-3d__object-wrapper">
+								<div class="transform-3d__example-1">
+									<span class="code">rotateX(45deg);</span>
+									<p>
+										Оберт навколо вісі Х при пласкій трансформації
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-2">
+									<span class="code">rotateX(45deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<p>
+										Задамо БАТЬКІСЬКОМУ блоку властивість perspective, яка встановлює відстань між площиною
+										z=0 та "користувачем"
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper">
+								<div class="transform-3d__example-3">
+									<span class="code">rotateY(45deg);</span>
+									<p>
+										Оберт навколо вісі Y при пласкій трансформації
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-4">
+									<span class="code">rotateY(45deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<p>
+										Задамо БАТЬКІСЬКОМУ блоку властивість perspective, яка встановлює відстань між площиною
+										z=0 та "користувачем"
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective-origin">
+								<div class="transform-3d__example-5">
+									<span class="code">rotateY(45deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<span class="code">perspective-origin: 100% 100%</span>
+									<p>
+										Задамо БАТЬКІСЬКОМУ блоку властивість perspective-origin, яка встановлює точку з якої
+										дивиться користувач. За замовченням - центр об'єкту (50% 50%)
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-6">
+									<span class="code">transform: translate3D(10px, -20px, 50px);</span>
+									<span class="code">perspective: 400px;</span>
+									<p>
+										Переносить на 50px вгору по вісі z, що для користувача просто збільшує об'єкт
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-7">
+									<span class="code">transform: translate3D(30%, 10%, 20%);</span>
+									<span class="code">perspective: 400px;</span>
+									<p>
+										Вісь z не працює з відсотками, бо товщина об'єкту нульова
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-8">
+									<span class="code">transform: translate3D(30%, 10%, 20px);</span>
+									<span class="code">perspective: 400px;</span>
+									<p>
+										Можна вказати значення в пікселях тільки для вісі z
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-9">
+									<span class="code">transform: rotate3D(1, 1, 1, 50deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<p>
+										Вказуємо координати вектора, а потім кут оберту
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-10">
+									<span class="code">transform: rotate3D(2, 0, -1, 30deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<p>
+										Вказуємо координати вектора, а потім кут оберту
+									</p>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-11">
+									<span class="code">transform: scale3D(1.5, 1, 2) rotate3D(1, 0, 0, 40deg);</span>
+									<span class="code">perspective: 400px;</span>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-12">
+									<span class="code">transform: rotate3D(1, 0, 0, 45deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<span class="code">transform-style: flat;</span>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective-style">
+								<div class="transform-3d__example-13">
+									<span class="code">transform: rotate3D(1, 0, 0, 45deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<span class="code">transform-style: preserve-3d;</span>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective">
+								<div class="transform-3d__example-14">
+									<span class="code">transform: rotate3d(0, 1, 0, 180deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<span class="code">backface-visibility: visible;</span>
+								</div>
+							</div>
+
+							<div class="transform-3d__object-wrapper transform-3d__object-wrapper_perspective-backface">
+								<div class="transform-3d__example-15">
+									<span class="code">transform: rotate3d(0, 1, 0, 180deg);</span>
+									<span class="code">perspective: 400px;</span>
+									<span class="code">backface-visibility: hidden;</span>
+								</div>
+							</div>
+
+							<!-- !transform-3d -->
+
+						</div>
+						<!-- !transform-3d -->
+
+					</div>
+				</div>
+			</div>
+			<!-- !відпрацювання властивостей -->
+
+			<div class="vehicle">
+				<div class="vehicle__container">
+					<p class="vehicle__text">Священний контрнаступ не зупинити</p>
+					<div class="leopard">
+						<div class="catterpillar">
+							<div class="track-1"></div>
+							<div class="track-2"></div>
+							<div class="track-3"></div>
+							<div class="track-4"></div>
+							<div class="track-5"></div>
+							<div class="track-6"></div>
+							<div class="track-7"></div>
+							<div class="track-8"></div>
+						</div>
+						<div class="armor"></div>
+						<div class="turret">
+							<div class="triangle-1"></div>
+							<div class="triangle-2"></div>
+							<div class="triangle-3"></div>
+							<div class="triangle-4"></div>
+						</div>
+
+						<div class="canon">
+							<div class="canon__barrel"></div>
+							<div class="canon__barrel-circle"></div>
+							<div class="canon__blob blob-canon">
+								<div class="blob-canon__shadow">
+								</div>
+							</div>
+						</div>
+
+						<div class="cross-1"></div>
+						<div class="cross-2"></div>
+						<div class="tower">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+	</div>
+
+</body>

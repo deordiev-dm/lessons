@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 14. CSS Flexbox</title>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!-- ============= -->
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">Homework #14. CSS Flexbox</h1>
+				<div class="header__subtitle">Made by Dmytro Deordiiev</div>
+			</div>
+		</header>
+		<!-- ============= -->
+
+		<!-- ============= -->
+		<main class="page">
+			<div class="homework">
+				<div class="homework__container">
+					<div class="practice-block">
+						<div class="practice-block__item">item 1</div>
+						<div class="practice-block__item">item 2</div>
+						<div class="practice-block__item">item 3</div>
+						<div class="practice-block__item">item 4</div>
+						<!-- <div class="practice-block__item">item 5</div>
+							<div class="practice-block__item">item 6</div>
+							<div class="practice-block__item">item 7</div>
+							<div class="practice-block__item">item 8</div>
+							<div class="practice-block__item">item 9</div>
+							<div class="practice-block__item">item 10</div> -->
+					</div>
+
+					<div class="row">
+						<div class="row__content">
+							<div class="column">
+								<div class="item">1</div>
+							</div>
+							<div class="column">
+								<div class="item">2</div>
+							</div>
+							<div class="column">
+								<div class="item">3</div>
+							</div>
+							<div class="column">
+								<div class="item">4</div>
+							</div>
+							<div class="column">
+								<div class="item">5</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-block">
+						<h2 class="text-block__title">Title</h2>
+						<p class="text-block__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							Assumenda
+							ratione
+							tempore quia reprehenderit animi sit consequuntur dolorum corrupti odit ducimus!</p>
+						<a href="#" class="text-block__link">Link</a>
+					</div>
+
+					<div class="cards">
+						<div class="cards__wrapper">
+							<div class="cards__item card">
+								<a href="" class="card__img">
+									<img src="img/colleagues.webp" alt="colleagues">
+								</a>
+								<div class="card__text">
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+								<a href="" class="card__link">Link</a>
+							</div>
+						</div>
+
+						<div class="cards__wrapper">
+							<div class="cards__item card">
+								<a href="" class="card__img">
+									<img src="img/colleagues.webp" alt="colleagues">
+								</a>
+								<div class="card__text">
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+								<a href="" class="card__link">Link</a>
+							</div>
+						</div>
+
+						<div class="cards__wrapper">
+							<div class="cards__item card">
+								<a href="" class="card__img">
+									<img src="img/colleagues.webp" alt="colleagues">
+								</a>
+								<div class="card__text">
+									<p>Lorem ipsum dolor sit amet.</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+									<p>Lorem ipsum dolor sit amet.</p>
+								</div>
+								<a href="" class="card__link">Link</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-block">
+						<h2 class="text-block__title">Біда з текстом</h2>
+						<a href="#" class="text-block__link text-block__link_dot">Це дуже довге посилання в якому багато
+							тексту і
+							яке ми хочемо стилізувати за допомогою псевдоелемента</a>
+						<a href="#" class="text-block__link text-block__link_dot text-block__link_dot-width">Це дуже довге
+							посилання в якому багато тексту і
+							яке ми хочемо стилізувати за допомогою псевдоелемента, якому додано width</a>
+					</div>
+
+					<div class="text-block">
+						<h2 class="text-block__title">Необіхдність використовувати flex-shrink: 0</h2>
+						<div class="text-block__example example-text-block">
+							<div class="example-text-block__icon"></div>
+							<div class="example-text-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Molestiae labore illo perferendis pariatur ducimus veritatis sunt quidem unde ab aut!
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ducimus nulla vero
+								sequi
+								sapiente laudantium, aut beatae ipsam cumque eaque!</div>
+						</div>
+						<div class="text-block__example example-text-block">
+							<div class="example-text-block__icon example-text-block__icon_flex-shrink"></div>
+							<div class="example-text-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Molestiae labore illo perferendis pariatur ducimus veritatis sunt quidem unde ab aut!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti obcaecati
+								laboriosam
+								quos
+								amet corrupti magni esse dolor, architecto dicta veniam suscipit vitae exercitationem
+								asperiores
+								illum voluptatum in. Nemo, dicta.</div>
+						</div>
+					</div>
+
+					<div class="block-example-float">
+						<img class="block-example-float__image" src="img/colleagues.webp" alt="colleagues">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic odit quia eveniet earum non neque
+							cumque
+							dolor nobis illum nulla, enim unde. Minima praesentium omnis commodi quae quia sequi quasi
+							aspernatur
+							provident iste, labore ut a temporibus esse maxime molestiae ipsam corrupti tempore perferendis
+							quibusdam consequatur sapiente! Consectetur accusantium aut odio id harum corporis. Suscipit
+							officiis
+							saepe velit quo incidunt vero, consequatur perspiciatis ad soluta cupiditate, id sit quos quis
+							atque
+							nisi, inventore tempore hic? Repudiandae numquam officia mollitia ipsam minima molestias libero
+							fugiat
+							reiciendis sequi? Perferendis vel fuga, nam adipisci dolorum dolores, dicta aspernatur ea esse
+							ab
+							iure
+							aperiam.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consectetur consequuntur quia
+							blanditiis, laudantium voluptatibus? Quae neque autem, magnam quod expedita inventore reiciendis
+							ut
+							et
+							dolorem deleniti eligendi vero laboriosam!</p>
+					</div>
+				</div>
+			</div>
+			<!-- !!!!!!!! -->
+			<div class="articles">
+				<div class="articles__container">
+
+					<div class="articles__actions actions">
+						<a href="" class="actions__item">Categories +</a>
+						<div class="actions__column-menu">
+							<a href="" class="actions__item actions__item_margin-right">3 Column</a>
+							<a href="" class="actions__item actions__item_not-active">4 Column</a>
+						</div>
+					</div>
+
+					<div class="articles__cards-block cards-block">
+						<!-- one row of cards -->
+						<div class="cards-block__row row-cards-block">
+
+							<!-- !card itself copy here -->
+							<div class="row-cards-block__card-wrapper card-wrapper">
+								<div class="card-content">
+									<a href="#" class="card-content__image">
+										<img src="img/articles/girl.webp" alt="girl">
+									</a>
+									<a href="" class="card-content__category-button">CREATIVE</a>
+									<div class="card-content__text">
+										<div class="card-content__date">29.Jun.2021</div>
+										<h2 class="card-content__title title-card-content">
+											<a href="#" class="title-card-content__link">Instagram artists with great photography
+												skills</a>
+										</h2>
+										<p>Many years ago, I worked for my parents who own a video
+											production company.</p>
+									</div>
+									<a href="#" class="card-content__author">By: Peter Rowardson</a>
+								</div>
+							</div>
+							<!-- !card itself copy here -->
+
+							<!-- !card itself copy here -->
+							<div class="row-cards-block__card-wrapper card-wrapper">
+								<div class="card-content">
+									<a href="#" class="card-content__image">
+										<img src="img/articles/product.webp" alt="product">
+									</a>
+									<a href="" class="card-content__category-button">CREATIVE</a>
+									<div class="card-content__text">
+										<div class="card-content__date">29.Jun.2021</div>
+										<h2 class="card-content__title title-card-content">
+											<a href="#" class="title-card-content__link">The 20 best creative & strong handmade of
+												2022 </a>
+										</h2>
+										<p>Many years ago, I worked for my parents who own a video
+											production company.</p>
+									</div>
+									<a href="#" class="card-content__author">By: Peter Rowardson</a>
+								</div>
+							</div>
+							<!-- !card itself copy here -->
+
+							<!-- !card itself copy here -->
+							<div class="row-cards-block__card-wrapper card-wrapper">
+								<div class="card-content">
+									<a href="#" class="card-content__image">
+										<img src="img/articles/building.webp" alt="building">
+									</a>
+									<a href="" class="card-content__category-button">CREATIVE</a>
+									<div class="card-content__text">
+										<div class="card-content__date">29.Jun.2021</div>
+										<h2 class="card-content__title title-card-content">
+											<a href="#" class="title-card-content__link">Apartamento at ten: A decade of
+												celebrating the everyday </a>
+										</h2>
+										<p>Many years ago, I worked for my parents who own a video
+											production company.</p>
+									</div>
+									<a href="#" class="card-content__author">By: Peter Rowardson</a>
+								</div>
+							</div>
+							<!-- !card itself copy here -->
+
+						</div>
+						<!-- one row of cards -->
+
+						<!-- one row of cards -->
+						<div class="cards-block__row row-cards-block">
+
+							<!-- !card itself copy here -->
+							<div class="row-cards-block__card-wrapper card-wrapper">
+								<div class="card-content">
+									<a href="#" class="card-content__image">
+										<img src="img/articles/office.webp" alt="office">
+									</a>
+									<a href="" class="card-content__category-button">CREATIVE</a>
+									<div class="card-content__text">
+										<div class="card-content__date">29.Jun.2021</div>
+										<h2 class="card-content__title title-card-content">
+											<a href="#" class="title-card-content__link">Alessandro Novelli’s animation plays with
+												ANDRE
+											</a>
+										</h2>
+										<p>Many years ago, I worked for my parents who own a video
+											production company.</p>
+									</div>
+									<a href="#" class="card-content__author">By: Peter Rowardson</a>
+								</div>
+							</div>
+							<!-- !card itself copy here -->
+
+							<!-- !card itself copy here -->
+							<div class="row-cards-block__card-wrapper card-wrapper">
+								<div class="card-content">
+									<a href="#" class="card-content__image">
+										<img src="img/articles/colleagues.webp" alt="colleagues">
+									</a>
+									<a href="" class="card-content__category-button">CREATIVE</a>
+									<div class="card-content__text">
+										<div class="card-content__date">29.Jun.2021</div>
+										<h2 class="card-content__title title-card-content">
+											<a href="#" class="title-card-content__link">Aron Klein’s captivating images of the
+												UDEA </a>
+										</h2>
+										<p>Many years ago, I worked for my parents who own a video
+											production company.</p>
+									</div>
+									<a href="#" class="card-content__author">By: Peter Rowardson</a>
+								</div>
+							</div>
+							<!-- !card itself copy here -->
+
+							<!-- !card itself copy here -->
+							<div class="row-cards-block__card-wrapper card-wrapper">
+								<div class="card-content">
+									<a href="#" class="card-content__image">
+										<img src="img/articles/work.webp" alt="work">
+									</a>
+									<a href="" class="card-content__category-button">CREATIVE</a>
+									<div class="card-content__text">
+										<div class="card-content__date">29.Jun.2021</div>
+										<h2 class="card-content__title title-card-content">
+											<a href="#" class="title-card-content__link">Renzo Patton combines design and
+												nature</a>
+										</h2>
+										<p>Many years ago, I worked for my parents who own a video
+											production company.</p>
+									</div>
+									<a href="#" class="card-content__author">By: Peter Rowardson</a>
+								</div>
+							</div>
+							<!-- !card itself copy here -->
+
+						</div>
+						<!-- one row of cards -->
+					</div>
+
+					<div class="articles__button button-articles">
+						<a href="#" class="button-articles__link">More Articles</a>
+					</div>
+
+				</div>
+			</div>
+			<!-- !!!!!!!! -->
+
+		</main>
+		<!-- ============= -->
+
+		<!-- ============= -->
+		<footer class="footer">
+			<div class="footer__container">
+				<p>
+					Made by <a class="footer__link" href="https://www.instagram.com/deordiev._.dm/">Dmytro Deordiiev</a>,
+					2023
+				</p>
+			</div>
+		</footer>
+		<!-- ============= -->
+	</div>
+</body>
+
+</html>

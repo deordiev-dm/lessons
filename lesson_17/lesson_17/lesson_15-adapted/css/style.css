@@ -1,0 +1,347 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700&display=swap");
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #9c9c9c;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+	max-width: 1230px; /* ширина макету 1200 */
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.page {
+}
+/* ============= */
+.room {
+	padding-top: 100px;
+}
+.achievements {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+/* ============== */
+.room__container {
+}
+
+.room__header {
+}
+.room__header:not(:last-child) {
+	margin-bottom: 53px;
+}
+.header-room {
+	text-align: center;
+}
+.header-room > *:not(:last-child) {
+	margin-bottom: 40px;
+}
+.header-room__title {
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 1.4;
+	color: #000000;
+	text-transform: capitalize;
+}
+.header-room__subtitle {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 518px;
+	color: #000000;
+}
+.room__image {
+}
+.room__image img {
+	width: 100%;
+}
+.room__image:not(:last-child) {
+	margin-bottom: 100px;
+}
+.image-room {
+}
+.room__articles {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -16px;
+	margin-right: -16px;
+	row-gap: 30px;
+}
+.room__articles:not(:last-child) {
+	margin-bottom: 82px;
+}
+.acticles-room {
+}
+.acticles-room__article {
+	flex: 0 0 50%;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.article-room {
+}
+.article-room__title {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.4;
+	color: #333333;
+	text-transform: capitalize;
+}
+.article-room__title:not(:last-child) {
+	margin-bottom: 24px;
+}
+.article-room__text {
+}
+.article-room__text:not(:last-child) {
+	margin-bottom: 60px;
+}
+.article-room__text > *:not(:last-child) {
+	margin-bottom: 30px;
+}
+.article-room__footer {
+}
+.article-room__date {
+	display: inline-block;
+}
+.article-room__date:not(:last-child) {
+	margin-right: 80px;
+}
+.article-room__category {
+	display: inline-block;
+	text-transform: capitalize;
+	transition: all 300ms;
+}
+.article-room__category:hover {
+	color: #2c3878;
+}
+.room__gallery {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 2.666667%; /* 32/1200 */
+	row-gap: 32px;
+}
+.room__gallery:not(:last-child) {
+	margin-bottom: 50px;
+}
+.gallery-room {
+}
+.gallery-room__item-wrapper {
+	flex: 0 0 48.666667%; /* 584/1200 */
+	position: relative;
+	padding-top: 42.75%; /* 513/1200 */
+}
+.gallery-room__item-wrapper img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.gallery-room__item-wrapper_width {
+	flex: 0 0 100%;
+}
+
+/* ============== */
+.achievements__container {
+}
+.achievements__header {
+}
+.header-achievements {
+}
+.achievements__header:not(:last-child) {
+	margin-bottom: 40px;
+}
+.header-achievements__title {
+	display: flex;
+	gap: 26px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000000;
+	text-transform: uppercase;
+}
+.header-achievements__title::after {
+	content: "";
+	align-self: center;
+	flex: 0 1 464px;
+	height: 2px;
+	background-color: #000000;
+}
+.achievements__items {
+}
+.items-achievements {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+}
+.items-achievements__card {
+}
+.card-achievements {
+	display: flex;
+}
+.card-achievements__image {
+	flex: 0 0 62.166667%; /* 746/1200 */
+	overflow: hidden;
+}
+.card-achievements__image img {
+	width: 100%;
+	transform: scale(1);
+	transition: all 800ms;
+}
+.card-achievements__image img:hover {
+	transform: scale(1.05);
+}
+.card-achievements__content {
+}
+.content-achievements {
+	flex: 0 0 37.833333%;
+	padding-left: 100px;
+	align-self: center;
+}
+.content-achievements > *:not(:last-child) {
+	margin-bottom: 20px;
+}
+.content-achievements__title {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.4;
+	color: #333333;
+}
+.content-achievements__link {
+	transition: all 300ms;
+}
+.content-achievements__link:hover {
+	color: #2c3878;
+}
+.content-achievements__text {
+}
+/* ====== адаптив ======= */
+@media (max-width: 991.98px) {
+	.room {
+		padding-top: 50px;
+	}
+	.header-room > *:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 910px) {
+	.achievements {
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+	.achievements__header:not(:last-child) {
+		margin-bottom: 25px;
+	}
+	.items-achievements {
+		row-gap: 25px;
+	}
+	.card-achievements {
+		flex-direction: column;
+		row-gap: 10px;
+	}
+	.content-achievements > *:not(:last-child) {
+		margin-bottom: 5px;
+	}
+	.card-achievements__content {
+		flex: 0 1 100%;
+		padding-left: 0;
+	}
+	.card-achievements__image {
+	}
+	.content-achievements {
+	}
+	.content-achievements__title {
+	}
+}
+
+@media (max-width: 850px) {
+	.room {
+		padding-top: 30px;
+	}
+	.header-room > *:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	.header-room__title {
+		font-size: 48px;
+	}
+	.room__header:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	.room__image:not(:last-child) {
+		margin-bottom: 50px;
+	}
+	.room__articles:not(:last-child) {
+		margin-bottom: 40px;
+	}
+	.article-room__title:not(:last-child) {
+		margin-bottom: 13px;
+	}
+	.acticles-room__article {
+		flex: 0 0 100%;
+	}
+	.article-room__text:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.article-room__text > *:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.room__header > *:not(:last-child) {
+		margin-bottom: 7px;
+	}
+	.room__header:not(:last-child) {
+		margin-bottom: 13px;
+	}
+	.header-room__title {
+		line-height: 1.1;
+	}
+	.header-room__subtitle {
+		line-height: 1.4;
+	}
+
+	.room__container > *:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.article-room > *:not(:last-child) {
+		margin-bottom: 7px;
+	}
+}
+
+@media (max-width: 570px) {
+	.gallery-room__item-wrapper {
+		flex: 0 0 100%;
+	}
+	.header-room__title {
+		font-size: 32px;
+		line-height: 1.1;
+	}
+	.article-room__title {
+		font-size: 20px;
+	}
+	.header-room__subtitle,
+	.article-room__text,
+	.article-room__footer {
+		font-size: 16px;
+	}
+	/* ==== */
+	.content-achievements__title {
+		font-size: 20px;
+	}
+	.content-achievements__text {
+		font-size: 14px;
+	}
+}

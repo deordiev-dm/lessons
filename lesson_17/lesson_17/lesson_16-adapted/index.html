@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 17. Adaptive layout</title>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!-- ============= -->
+		<header class="header">
+		</header>
+		<!-- ============= -->
+
+		<!-- ============= -->
+		<main class="page">
+
+			<div class="tailgrids">
+				<div class="tailgrids__container">
+					<div class="tailgrids__content">
+						<div class="tailgrids__header header-tailgrids">
+							<h2 class="header-tailgrids__title title-tailgrids">Checkout</h2>
+							<div class="header-tailgrids__subtitle">There are 3 products in your cart</div>
+						</div>
+						<form action="https://jsonplaceholder.typicode.com/posts" method="post"
+							class="tailgrids__form form-tailgrids">
+							<h3 class="form-tailgrids__title title-tailgrids">Billing Details</h3>
+
+							<div class="form-tailgrids__items">
+								<div class="form-tailgrids__item">
+									<input type="text" name="first-name" placeholder="First name*" required
+										class="form-tailgrids__input" autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="text" name="last-name" placeholder="Last name*" required
+										class="form-tailgrids__input" autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="text" name="address-1" placeholder="Address*" required
+										class="form-tailgrids__input" autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="text" name="address-2" placeholder="Address line 2"
+										class="form-tailgrids__input" autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<select name="country" class="form-tailgrids__input form-tailgrids__input_select" required>
+										<option value="" disabled selected>Country*</option>
+										<option value="ukraine">Ukraine</option>
+										<option value="poland">Poland</option>
+										<option value="germany">Germany</option>
+									</select>
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="text" name="city" placeholder="City/Town*" required
+										class="form-tailgrids__input" autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="text" name="postcode-zip" placeholder="Postcode / ZIP*" required
+										class="form-tailgrids__input" autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="tel" name="phone" placeholder="Phone*" required class="form-tailgrids__input"
+										autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="text" name="postcode-zip" placeholder="Postcode / ZIP*" required
+										class="form-tailgrids__input" autocomplete="off">
+								</div>
+
+								<div class="form-tailgrids__item">
+									<input type="tel" name="phone" placeholder="Phone*" required class="form-tailgrids__input"
+										autocomplete="off">
+								</div>
+							</div>
+
+							<textarea name="add-info" placeholder="Additional information"
+								class="form-tailgrids__textarea"></textarea>
+
+							<div class="form-tailgrids__checkboxes">
+								<div class="form-tailgrids__item-checkbox">
+									<input type="checkbox" name="create-account" id="create-account-01"
+										class="form-tailgrids__checkbox">
+									<label for="create-account-01" class="form-tailgrids__label">Create Account</label>
+								</div>
+
+								<div class="form-tailgrids__item-checkbox">
+									<input type="checkbox" name="create-account" id="different-address-01"
+										class="form-tailgrids__checkbox">
+									<label for="different-address-01" class="form-tailgrids__label">
+										Ship to a different address?
+									</label>
+								</div>
+							</div>
+
+							<div class="form-tailgrids__item form-tailgrids__item_coupon">
+								<h4 class="form-tailgrids__input-title">
+									Apply Coupon to get discount!
+								</h4>
+								<div class="form-tailgrids__coupon">
+									<input type="text" name="coupon" placeholder="Coupon code"
+										class="form-tailgrids__input form-tailgrids__input_coupon" autocomplete="off">
+								</div>
+								<button type="button" class="form-tailgrids__button-coupon">Apply Code</button>
+							</div>
+
+							<button type="submit" class="form-tailgrids__submit-button">Place an Order</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="crisp">
+				<div class="crisp__container">
+					<div class="crisp__content">
+						<form action="https://jsonplaceholder.typicode.com/posts" method="post"
+							class="crisp__form form-crisp crisp__form_border-bottom">
+							<h3 class="form-crisp__title title-crisp">Shipping Address</h3>
+							<div class="form-crisp__items">
+								<div class="form-crisp__item">
+									<label for="user-email-crisp" class="form-crisp__label">Email Address <span
+											class="form-crisp__red-star">*</span>
+									</label>
+									<input type="email" name="user-email" id="user-email-crisp" required
+										class="form-crisp__input" placeholder="roni_cost@example.com" autocomplete="off">
+								</div>
+								<div class="form-crisp__item">
+									<label for="user-pass-crisp" class="form-crisp__label">Password</label>
+									<input type="password" name="user-pass" placeholder="******************" id="user-pass-crisp"
+										autocomplete="off" class="form-crisp__input" minlength="3">
+								</div>
+								<div class="form-crisp__item">
+									<label for="user-zip-crisp" class="form-crisp__label">Zip/Postal Code</label>
+									<input type="tel" name="user-zip" id="user-zip-crisp" autocomplete="off"
+										class="form-crisp__input">
+								</div>
+							</div>
+							<p class="form-crisp__warning">You already have an account with us. Sign in or continue as guest.
+							</p>
+							<button type="submit" class="form-crisp__submit">login</button>
+							<a href="#" class="form-crisp__password-recovery">Forgot Your Password?</a>
+						</form>
+
+						<form action="https://jsonplaceholder.typicode.com/posts" method="post"
+							class="crisp__form form-crisp">
+							<div class="form-crisp__items form-crisp__items_margin">
+								<div class="form-crisp__item">
+									<label for="user-first-name-crisp" class="form-crisp__label">First Name <span
+											class="form-crisp__red-star">*</span>
+									</label>
+									<input type="text" name="first-name" id="user-first-name-crisp" required
+										class="form-crisp__input" autocomplete="off">
+								</div>
+								<div class="form-crisp__item">
+									<label for="user-last-name-crisp" class="form-crisp__label">Last Name <span
+											class="form-crisp__red-star">*</span>
+									</label>
+									<input type="text" name="last-name" id="user-last-name-crisp" required
+										class="form-crisp__input" autocomplete="off">
+								</div>
+								<div class="form-crisp__item">
+									<label for="user-company-crisp" class="form-crisp__label">Company
+									</label>
+									<input type="text" name="company" id="user-company-crisp" class="form-crisp__input"
+										autocomplete="off">
+								</div>
+								<div class="form-crisp__item">
+									<label for="user-street-address-crisp" class="form-crisp__label">Street Address<span
+											class="form-crisp__red-star">*</span>
+									</label>
+									<input type="text" name="street-address" id="user-street-address-crisp" required
+										class="form-crisp__input" autocomplete="off">
+								</div>
+								<div class="form-crisp__item">
+									<input type="text" name="street-address-2" class="form-crisp__input" autocomplete="off">
+								</div>
+								<div class="form-crisp__item">
+									<input type="text" name="street-address-3" class="form-crisp__input" autocomplete="off">
+								</div>
+								<div class="form-crisp__item">
+									<label for="user-country-crisp" class="form-crisp__label">Country <span
+											class="form-crisp__red-star">*</span>
+									</label>
+									<input type="text" name="country" id="user-country-crisp" required class="form-crisp__input"
+										autocomplete="off">
+								</div>
+								<div class="form-crisp__item form-crisp__item_select">
+									<label for="user-state-crisp" class="form-crisp__label">State/Province <span
+											class="form-crisp__red-star">*</span>
+									</label>
+									<select name="state" id="user-state-crisp" class="form-crisp__input form-crisp__input_select"
+										required>
+										<option value="" disabled selected>
+											Please select a region, state or province
+										</option>
+										<option value="ukraine">Ukraine</option>
+										<option value="poland">Poland</option>
+										<option value="germany">Germany</option>
+									</select>
+								</div>
+							</div>
+
+							<h3 class="form-crisp__title title-crisp form-crisp__title_margin">Shipping Methods</h3>
+							<div class="form-crisp__price-table price-table">
+								<div class="price-table__row">
+									<input type="radio" id="price-5" name="price" value="5" class="price-table__radio">
+									<label for="price-5" class="price-table__label label-price-table">
+										<span class="label-price-table__item label-price-table__item_price">$5.00</span>
+										<span class="label-price-table__item">Fixed</span>
+										<span class="label-price-table__item">Flat Rate</span>
+									</label>
+								</div>
+								<div class="price-table__row price-table__row price-table__row_short-line">
+									<input type="radio" id="price-10" name="price" value="10" class="price-table__radio" checked>
+									<label for="price-10" class="price-table__label label-price-table">
+										<span class="label-price-table__item label-price-table__item_price">$10.00</span>
+										<span class="label-price-table__item">Table Rate</span>
+										<span class="label-price-table__item">Best Way</span>
+									</label>
+								</div>
+							</div>
+
+							<div class="form-crisp__buttons">
+								<button type="submit" class="form-crisp__submit">next </button>
+								<a href="#" class="form-crisp__back-link">back</a>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<!-- ============= -->
+
+		<!-- ============= -->
+		<footer class="footer">
+		</footer>
+		<!-- ============= -->
+	</div>
+</body>
+
+</html>

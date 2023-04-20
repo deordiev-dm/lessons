@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок 9. Веб-графіка</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="wrapper__container">
+			<h1 class="main-heading">Homework #9. Web-graphics</h1>
+
+			<div class="block__icons icons">
+				<h2 class="icons__title title">Іконки</h2>
+				<p>
+					Іконки - це невеликі схематичні зображення (векторні), які несуть певну функцію або доповнюють контент та
+					підсилюють ефект. Іконки мають формат SVG. Можуть додаватись як через тег &lt;img&gt; та і через
+					властивість background у CSS.
+				</p>
+				<div class="icons__box">
+					<img src="img/icons/logo-light.svg" alt="logo-light">
+					<img src="img/icons/logo-dark.svg" alt="logo-dark">
+					<div class="icon__arrow">
+						<img src="img/icons/block-01/arrow.svg" alt="arrow">
+					</div>
+					<div class="icon__phone">
+						<img src="img/icons/block-01/phone.svg" alt="phone">
+					</div>
+					<div class="icon__group-1">
+						<img src="img/icons/block-03/design.svg" alt="design">
+					</div>
+					<div class="icon__group-1">
+						<img src="img/icons/block-03/tailwind.svg" alt="tailwind">
+					</div>
+					<div class="icon__group-1">
+						<img src="img/icons/block-03/components.svg" alt="components">
+					</div>
+					<div class="icon__group-1">
+						<img src="img/icons/block-03/speed.svg" alt="speed">
+					</div>
+					<div class="icon__group-1">
+						<img src="img/icons/block-03/customize.svg" alt="customize">
+					</div>
+					<div class="icon__group-1">
+						<img src="img/icons/block-03/updates.svg" alt="updates">
+					</div>
+
+					<img src="img/icons/block-07/ayro-ui.svg" alt="ayro-ui">
+					<img src="img/icons/block-07/gray-grids.svg" alt="gray-grids">
+					<img src="img/icons/block-07/lineicons.svg" alt="lineicons">
+					<img src="img/icons/block-10/letter.svg" alt="letter">
+					<img src="img/icons/block-10/phone.svg" alt="phone">
+					<img src="img/icons/block-10/pinpoint.svg" alt="pinpoint">
+				</div>
+			</div>
+
+			<div class="block__content">
+				<h2 class="content__title title">Контентні зображення</h2>
+				<p>
+					Є контентом сайту. Додаються через тег &lt;img&gt; щоб власник мав змогу змінювати їх через адмін панель.
+				</p>
+				<p class="list__description">Підготовка до інтеграції на сайт відбувається подібним чином:</p>
+				<ol class="content__list">
+					<li>
+						<ul>
+							<li>Якщо зображення не має прозорості - експортуємо у JPG</li>
+							<li>В зворотньому випадку - PNG</li>
+						</ul>
+					</li>
+					<li>Оптимізуємо зображення за допомогою оналайн-сервісу tinypng</li>
+					<li>Конвертуємо зображення у формат WEBP</li>
+				</ol>
+				<div class="content__box">
+					<img src="img/content/block-01/header-background.webp" alt="person">
+					<img src="img/content/block-02/man-01.webp" alt="person">
+					<img src="img/content/block-02/man-02.webp" alt="person">
+					<img src="img/content/block-02/two_women.webp" alt="two persons">
+					<img src="img/content/block-04/woman-01.webp" alt="person">
+					<img src="img/content/block-04/collegues-02.webp" alt="collegues">
+					<img src="img/content/block-04/laptop-03.webp" alt="laptop">
+					<img src="img/content/block-04/card-04.webp" alt="card">
+					<img src="img/content/block-04/devices-05.webp" alt="devices">
+					<img src="img/content/block-04/collegues-06.webp" alt="a group of colleagues">
+					<img src="img/content/block-05/person-01.webp" alt="person">
+					<img src="img/content/block-05/person-02.webp" alt="person">
+					<img src="img/content/block-05/person-03.webp" alt="person">
+					<img src="img/content/block-05/person-04.webp" alt="person">
+					<img src="img/content/block-09/office-01.webp" alt="office">
+					<img src="img/content/block-09/employee-02.webp" alt="employee">
+					<img src="img/content/block-09/colleagues-03.webp" alt="colleagues">
+				</div>
+			</div>
+
+
+			<div class="block__design">
+				<h2 class="design__title title">Декоративні зображення</h2>
+				<p>
+					Даний тип зображень - це зображення які не несуть в собі жодної інформації. Вони присутні тільки у
+					дизайнерський цілях. Корисно буде задати собі таке питання: "Якщо зображення зникне, чи зможе користувач
+					отримати інформацію від контенту в тому ж обсязі?" Декоративні зображення завжди додаються через CSS
+					властивість background. Можуть бути як у WEBP-форматі, так і у SVG, в залежності векторне чи растрове це
+					зображення.
+				</p>
+				<div class="design__box">
+					<img src="img/design/block-02/dotted-shape.svg" alt="dotted shape">
+					<img src="img/design/block-05/dotted-shape.svg" alt="dotted shape">
+					<img src="img/design/block-05/ellipse.svg" alt="ellipse">
+					<img src="img/design/block-06/oval-01.svg" alt="oval">
+					<img src="img/design/block-06/oval-02.svg" alt="oval">
+					<img src="img/design/block-07/dotted-shape.svg" alt="dotted shape">
+					<img src="img/design/block-08/dotted-shape.svg" alt="dotted shape">
+					<img src="img/design/block-08/lines.svg" alt="lines">
+					<img src="img/design/block-08/shape.svg" alt="shape">
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

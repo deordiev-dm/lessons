@@ -1,0 +1,149 @@
+@import url(reset.css);
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap");
+
+body {
+	background-color: rgb(251, 242, 255);
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: white;
+}
+
+.wrapper {
+}
+.wrapper__container {
+	max-width: 1170px;
+	padding: 20px 15px;
+	margin: 0 auto;
+}
+
+.wrapper__container > *:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.main-heading {
+	font-size: 28px;
+	font-weight: 700;
+	color: black;
+}
+
+.title {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.wrapper__container [class*="block"] {
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+
+.block__icons {
+	background-color: rgb(88, 8, 112);
+}
+
+[class*="block"] > *:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.icons {
+}
+
+.icons__box img {
+	vertical-align: middle;
+}
+
+.icon__arrow {
+	display: inline-block;
+	padding: 10px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.icon__phone {
+	display: inline-block;
+	height: 45px;
+	width: 45px;
+	background-color: #3056d3;
+	border-radius: 50%;
+	text-align: center;
+	padding: 12px;
+}
+
+.icon__group-1 {
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	text-align: center;
+	background-color: #3056d3;
+	border-radius: 15px;
+	padding-top: 20px;
+	vertical-align: bottom;
+}
+
+.block__content {
+	background-color: rgb(5, 174, 101);
+}
+
+.content__list {
+	counter-reset: item;
+}
+
+.block__content .list__description {
+	margin-bottom: 5px;
+}
+
+ol.content__list > li::before {
+	counter-increment: item;
+	content: counter(item) ")";
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.content__list > *:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.content__list ul {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 5px;
+}
+
+.content__list ul li {
+	margin-left: 12px;
+}
+
+.content__list ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.content__list ul li::before {
+	content: "";
+	display: inline-block;
+	height: 7px;
+	width: 7px;
+	background-color: white;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-left: -13px;
+	vertical-align: middle;
+}
+
+.block__content img {
+	max-width: 25%;
+	max-height: 150px;
+	margin: 0px 5px 5px 0px;
+}
+.block__design {
+	color: black;
+	background-color: #d8d3d7;
+}
+
+.design__box img {
+	max-width: 80px;
+}
+
+.design__title {
+}
+.title {
+}

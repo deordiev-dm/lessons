@@ -1,0 +1,124 @@
+/* обнулення стилів */
+@import url(reset.css);
+
+/* підключення шрифту у CSS файлі */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,500,700,500italic&display=swap);
+
+/* підключення шрифту з локальних файлів */
+@font-face {
+	font-family: "Sacramento";
+	src: url("../fonts/Sacramento-Regular.woff") format("woff2"), url("../fonts/Sacramento-Regular.woff2") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+}
+
+.header {
+	text-decoration: underline;
+}
+
+.header a {
+	color: blue;
+}
+
+.title {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 36px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: rgb(64, 58, 58);
+}
+
+.page__title {
+	text-transform: uppercase;
+	color: black;
+	font-weight: 500;
+	text-shadow: 0px 3px 20px rgba(158, 1, 255, 0.462);
+}
+
+h2.title {
+	font-size: 28px;
+	line-height: 2;
+}
+
+h3.title {
+	font-size: 22px;
+}
+
+.example-1 {
+	font-family: "Sacramento", fantasy;
+}
+
+.example-2 {
+	font-family: "Josefin Sans";
+	font-weight: 500;
+	font-style: italic;
+}
+
+.example-3 {
+	font-style: oblique;
+}
+
+.example-4 {
+	text-align: center;
+}
+
+.example-5 {
+	text-align: right;
+}
+
+.example-6 {
+	text-align: justify;
+}
+
+.example-7 {
+	text-transform: capitalize;
+}
+
+.example-8 {
+	text-transform: lowercase;
+}
+
+.example-9 {
+	text-transform: uppercase;
+}
+
+.example-10 {
+	text-indent: 10px;
+}
+
+.example-11 {
+	letter-spacing: 5px;
+	word-spacing: 10px;
+}
+
+/* !додає горизонтальний скрол, обережно */
+.example-12 {
+	white-space: nowrap;
+}
+
+.example-13 {
+	/* можна використовувати щоб закреслити стару ціну */
+	text-decoration: line-through;
+}
+
+footer {
+	font-weight: 500;
+	color: blueviolet;
+}
+
+span {
+	font-family: monospace;
+	font-weight: 700;
+	color: red;
+}
+
+img {
+	/* вибачте але було боляче дивитись */
+	margin: 10px 5px;
+}

@@ -1,0 +1,695 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+
+body {
+	font-family: "Inter", sans-serif;
+	color: white;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+
+[class*="__container"] {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.page {
+}
+.practice {
+	background-color: #755ec2;
+	padding: 100px 0;
+}
+.practice__title {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+.practice__subtitle {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+.practice__content {
+}
+
+/* загальні стилі */
+h3[class*="__title"] {
+	margin-bottom: 15px;
+}
+
+[class*="__object-wrapper"] {
+	max-width: 600px;
+	/* margin: 0 auto; */
+}
+
+[class*="__example-"] {
+	padding: 20px 10px;
+	background-color: #e2e2e2;
+	color: black;
+	border: 2px solid #000;
+	transition: 400ms all;
+	transform: translate(0, 0);
+	transform: scale(1, 1);
+	transform: skew(0deg);
+	transform: rotate(0);
+}
+
+.code {
+	display: block;
+	font-family: monospace;
+	font-size: 16px;
+	font-weight: 600;
+	color: #755ec2;
+	transition: 150ms all;
+}
+
+[class*="__object-wrapper"] {
+	background-color: rgba(255, 255, 255, 0.361);
+}
+/* загальні стилі */
+
+/* загальні ефекти при наведенні мишою */
+*:hover > [class*="_example-"] {
+	background-color: #4bcf2a;
+}
+
+[class*="__object-wrapper"]:hover .code {
+	color: #fff;
+}
+/* загальні ефекти при наведенні мишою */
+
+/* відступи */
+.practice__content > *:not(:last-child) {
+	margin-bottom: 40px;
+}
+[class*="__object-wrapper"]:not(:last-child) {
+	margin-bottom: 10px;
+}
+/* відступи */
+
+.content {
+}
+.content .content__title {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+.content__translate {
+}
+.translate {
+}
+.translate__title {
+}
+.translate__object-wrapper {
+}
+.translate__example-1 {
+}
+.translate__example-2 {
+}
+.translate__example-3 {
+}
+.translate__example-4 {
+}
+.translate__example-5 {
+}
+/* ефект при наведенні мишою */
+*:hover > .translate__example-1 {
+	transform: translate(50px);
+}
+*:hover > .translate__example-2 {
+	transform: translate(10px, -20px);
+}
+*:hover > .translate__example-3 {
+	transform: translate(-5%, 25%);
+}
+*:hover > .translate__example-4 {
+	transform: translateX(50px);
+}
+*:hover > .translate__example-5 {
+	transform: translateY(20px);
+}
+/* ефект при наведенні мишою */
+.content__scale {
+}
+.scale {
+}
+.scale__title {
+}
+.scale__object-wrapper {
+}
+.scale__example-1 {
+}
+.scale__example-2 {
+}
+.scale__example-3 {
+}
+.scale__example-4 {
+}
+.scale__example-5 {
+}
+.scale__example-6 {
+}
+.scale__example-7 {
+}
+.scale__example-8 {
+}
+.scale__example-9 {
+}
+.scale__example-10 {
+}
+.scale__example-11 {
+}
+/* ефект при наведенні мишою */
+*:hover > .scale__example-1 {
+	transform: scale(1.1);
+}
+*:hover > .scale__example-2 {
+	transform: scale(1.1, 2);
+}
+*:hover > .scale__example-3 {
+	transform: scale(20px);
+}
+*:hover > .scale__example-4 {
+	transform: scale(115%);
+}
+*:hover > .scale__example-5 {
+	transform: scaleX(1.3);
+}
+*:hover > .scale__example-6 {
+	transform: scaleY(1.5);
+}
+*:hover > .scale__example-7 {
+	transform: scale(0.9);
+}
+*:hover > .scale__example-8 {
+	transform: scale(0);
+}
+*:hover > .scale__example-9 {
+	transform: scale(-0.5);
+}
+*:hover > .scale__example-10 {
+	transform: scale(-1, 1);
+}
+*:hover > .scale__example-11 {
+	transform: scale(1, -1);
+}
+/* ефект при наведенні мишою */
+.content__rotate {
+}
+.rotate {
+}
+.rotate__title {
+}
+.rotate__object-wrapper {
+}
+.rotate__example-1 {
+}
+.rotate__example-2 {
+}
+.rotate__example-3 {
+}
+.rotate__example-4 {
+}
+.rotate__example-5 {
+}
+.rotate__example-6 {
+}
+.rotate__example-7 {
+}
+.rotate__example-8 {
+}
+.rotate__example-9 {
+}
+.rotate__example-10 {
+}
+/* ефект при наведенні мишою */
+*:hover > .rotate__example-1 {
+	transform: rotate(45deg);
+}
+*:hover > .rotate__example-2 {
+	transform: rotate(-45deg);
+}
+*:hover > .rotate__example-3 {
+	transform: rotateX(60deg);
+}
+*:hover > .rotate__example-4 {
+	transform: rotateY(60deg);
+}
+*:hover > .rotate__example-5 {
+	transform: rotate(200px);
+}
+*:hover > .rotate__example-6 {
+	transform: rotate(2rad);
+}
+*:hover > .rotate__example-7 {
+	transform: rotate(-100grad);
+}
+*:hover > .rotate__example-8 {
+	transform: rotate(-180deg);
+}
+/* ефект при наведенні мишою */
+.content__skew {
+}
+.skew {
+}
+.skew__title {
+}
+.skew__object-wrapper {
+}
+.skew__example-1 {
+}
+.skew__example-2 {
+}
+.skew__example-3 {
+}
+.skew__example-4 {
+}
+.skew__example-5 {
+}
+/* ефект при наведенні мишою */
+*:hover > .skew__example-1 {
+	transform: skew(15deg);
+}
+*:hover > .skew__example-2 {
+	transform: skew(20deg, 0deg);
+}
+*:hover > .skew__example-3 {
+	transform: skew(0deg, 20deg);
+}
+*:hover > .skew__example-4 {
+	transform: skew(-15deg, 20deg);
+}
+/* ефект при наведенні мишою */
+.content__multiple-2d {
+}
+.multiple-2d {
+}
+.multiple-2d__title {
+}
+.multiple-2d__object-wrapper {
+}
+.multiple-2d__example-1 {
+}
+.multiple-2d__example-2 {
+}
+.multiple-2d__example-3 {
+}
+.multiple-2d__example-4 {
+}
+.multiple-2d .multiple-2d__example-5 {
+	transform: rotate(0);
+}
+/* ефект при наведенні мишою */
+*:hover > .multiple-2d__example-1 {
+	transform: translate(-100px, 10px) rotate(12deg);
+}
+*:hover > .multiple-2d__example-2 {
+	transform: skew(20deg) scale(-1, 1) rotate(20deg);
+}
+*:hover > .multiple-2d__example-3 {
+	transform: scale(1.1) translate(50px, 0px);
+}
+*:hover > .multiple-2d__example-4 {
+	transform: scale(0.99) translate(0px, -2px) rotate(1deg);
+}
+*:hover > .multiple-2d__example-5 {
+	transform: rotate(360deg) scale(0.5);
+}
+/* ефект при наведенні мишою */
+.content__transform-origin {
+}
+.transform-origin {
+}
+.transform-origin__title {
+}
+.transform-origin__object-wrapper {
+}
+.transform-origin__example-1 {
+}
+.transform-origin__example-2 {
+}
+.transform-origin__example-3 {
+}
+.transform-origin__example-4 {
+}
+.transform-origin__example-5 {
+}
+.transform-origin__example-6 {
+}
+.transform-origin__example-7 {
+}
+.transform-origin__example-8 {
+}
+/* ефект при наведенні мишою */
+*:hover > .transform-origin__example-1 {
+	transform: rotate(30deg);
+}
+*:hover > .transform-origin__example-2 {
+	transform-origin: left top;
+	transform: rotate(30deg);
+}
+*:hover > .transform-origin__example-3 {
+	transform: scale(0.7);
+}
+*:hover > .transform-origin__example-4 {
+	transform-origin: -0% 150%;
+	transform: scale(0.7);
+}
+*:hover > .transform-origin__example-5 {
+	transform: translate(20%, 10%);
+}
+*:hover > .transform-origin__example-6 {
+	transform-origin: 10px 100px;
+	transform: translate(20%, 10%);
+}
+*:hover > .transform-origin__example-7 {
+	transform: skew(-10deg);
+}
+*:hover > .transform-origin__example-8 {
+	transform-origin: 0% 0%;
+	transform: skew(-10deg);
+}
+/* ефект при наведенні мишою */
+.content__3d-transform {
+}
+.content__transform-3d {
+}
+.transform-3d {
+}
+.transform-3d__title {
+}
+.transform-3d__object-wrapper {
+}
+.transform-3d__object-wrapper_perspective {
+	perspective: 400px;
+}
+.transform-3d__object-wrapper_perspective-origin {
+	perspective: 400px;
+	perspective-origin: 100% 100%;
+}
+.transform-3d__object-wrapper_perspective-style {
+	transform-style: preserve-3d;
+}
+.transform-3d__object-wrapper_perspective-backface {
+}
+.transform-3d__example-1 {
+}
+.transform-3d__example-2 {
+}
+/* ефект при наведенні мишою */
+*:hover > .transform-3d__example-1 {
+	transform: rotateX(45deg);
+}
+*:hover > .transform-3d__example-2 {
+	transform: rotateX(45deg);
+}
+*:hover > .transform-3d__example-3 {
+	transform: rotateY(45deg);
+}
+*:hover > .transform-3d__example-4 {
+	transform: rotateY(45deg);
+}
+*:hover > .transform-3d__example-5 {
+	transform: rotateY(45deg);
+}
+*:hover > .transform-3d__example-6 {
+	transform: translate3D(10px, -20px, 50px);
+}
+*:hover > .transform-3d__example-7 {
+	transform: translate3D(30%, 10%, 20%);
+}
+*:hover > .transform-3d__example-8 {
+	transform: translate3D(30%, 10%, 20px);
+}
+*:hover > .transform-3d__example-9 {
+	transform: rotate3D(1, 1, 1, 50deg);
+}
+*:hover > .transform-3d__example-10 {
+	transform: rotate3D(2, 0, -1, 30deg);
+}
+*:hover > .transform-3d__example-11 {
+	transform: scale3D(1.5, 1, 2) rotate3D(1, 0, 0, 40deg);
+}
+*:hover > .transform-3d__example-12 {
+	transform: rotate3D(1, 2, 3, 45deg);
+}
+*:hover > .transform-3d__example-13 {
+	transform: rotate3D(1, 2, 3, 45deg);
+}
+*:hover > .transform-3d__example-14 {
+	transform: rotate3d(0, 1, 0, 180deg);
+}
+*:hover > .transform-3d__example-15 {
+	backface-visibility: hidden;
+	transform: rotate3d(0, 1, 0, 180deg);
+}
+
+/* !--------------------------------------------! */
+
+.vehicle {
+	background-color: #89924e;
+	padding: 100px 0px;
+}
+
+.vehicle__text {
+	font-size: 36px;
+	font-weight: 700;
+	text-shadow: 1px 3px 5px #000;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.leopard {
+	margin: 0 auto;
+	transform: translate(300px, 100px);
+}
+.catterpillar {
+	position: relative;
+	background-color: #181c1777;
+	height: 65px;
+	width: 500px;
+	border: 1px solid #000;
+	border: 6px dashed #000;
+	border-radius: 20px 30px 120px 110px;
+}
+
+.track-1 {
+	position: absolute;
+	left: 7px;
+	top: 0;
+
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+
+.track-2 {
+	position: absolute;
+	left: 65px;
+	top: 4px;
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+
+.track-3 {
+	position: absolute;
+	left: 130px;
+	top: 4px;
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+
+.track-4 {
+	position: absolute;
+	left: 195px;
+	top: 4px;
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+
+.track-5 {
+	position: absolute;
+	left: 260px;
+	top: 4px;
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+.track-6 {
+	position: absolute;
+	left: 320px;
+	top: 4px;
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+.track-7 {
+	position: absolute;
+	left: 380px;
+	top: 4px;
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+
+.track-8 {
+	position: absolute;
+	left: 435px;
+	top: -10px;
+	height: 50px;
+	width: 50px;
+	background-color: #344f1a;
+	border: 3px dashed #79791b;
+	border-radius: 50%;
+}
+
+.armor {
+	position: relative;
+	z-index: 50;
+	height: 60px;
+	width: 510px;
+	border: 2px solid #000;
+	background: rgb(56, 85, 19);
+	background: linear-gradient(90deg, rgba(56, 85, 19, 1) 0%, rgba(2, 60, 0, 1) 50%, rgba(42, 43, 0, 1) 100%);
+	box-shadow: 2px 2px 3px black;
+	clip-path: polygon(29% 17%, 89% 16%, 100% 13%, 98% 78%, 89% 78%, 89% 100%, 6% 100%, 0 77%, 0 37%);
+	transform: translate(0px, -95px) scale(1.05, 1.1);
+}
+.turret {
+	position: relative;
+	z-index: 30;
+	height: 60px;
+	width: 510px;
+	background-color: #345416;
+	clip-path: polygon(35% 0%, 55% 0%, 100% 12%, 98% 70%, 70% 70%, 67% 100%, 15% 90%, 0 63%, 0 46%, 14% 15%);
+	transform: translate(0px, -201px) scale(0.85, 1.5);
+}
+
+.triangle-1 {
+	position: relative;
+	z-index: 29;
+	clip-path: polygon(0 0, 73% 0, 100% 99%, 25% 100%);
+	height: 20px;
+	width: 100px;
+	background-color: #1d300c;
+	transform: translate(-13px, 35px) rotate(0deg) scale(1, 1.5);
+}
+.triangle-2 {
+	position: relative;
+	z-index: 28;
+	clip-path: polygon(32% 0, 100% 0, 68% 100%, 0 100%);
+	height: 20px;
+	width: 100px;
+	background-color: #40681b;
+	transform: translate(-13px, -10px) rotate(180deg) scale(1, 1.5);
+}
+
+.triangle-3 {
+	position: relative;
+	z-index: 21;
+	clip-path: polygon(0 0, 100% 0, 87% 100%, 0 100%);
+	height: 20px;
+	width: 150px;
+	background-color: #4c6c2d;
+	transform: translate(80px, -40px) scale(3, 2);
+}
+.triangle-4 {
+	position: relative;
+	z-index: 20;
+	clip-path: polygon(0 0, 77% 0, 100% 100%, 0 100%);
+	height: 20px;
+	width: 100px;
+	background-color: rgb(52, 72, 14);
+	transform: translate(138px, -20px) scale(5, 2);
+}
+
+.canon {
+	position: relative;
+	z-index: 20;
+	width: 400px;
+	height: 13px;
+	background-color: #21380e;
+	border-radius: 10px;
+	transform: translate(-230px, -233px) scale(1, 1);
+}
+
+.canon__barrel {
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	background-color: rgb(151, 14, 14);
+	border-radius: 50%;
+	transform: scale(0.7, 1) translate(-3px, 0px);
+}
+
+.canon__barrel-circle {
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	transform: scale(0.7, 1) translate(-3px, 0px);
+}
+.canon__blob {
+	transform: translate(120px, -5px);
+	height: 23px;
+	width: 52px;
+	background-color: #2c4e10;
+	border-radius: 6px;
+}
+
+.blob-canon__shadow {
+	height: 23px;
+	width: 23px;
+	background-color: #21380e;
+	border-radius: 50%;
+	transform: scale(0.5, 0.95) translate(-13px);
+}
+
+.cross-1 {
+	position: relative;
+	z-index: 100;
+	height: 30px;
+	width: 8px;
+	background-color: #fff;
+	transform: translate(400px, -270px);
+}
+
+.cross-2 {
+	position: relative;
+	z-index: 100;
+	height: 8px;
+	width: 30px;
+	background-color: #fff;
+	transform: translate(389px, -289px);
+}
+
+.tower {
+	height: 20px;
+	width: 60px;
+	background-color: #1d300c;
+	transform: translate(187px, -336px);
+}
