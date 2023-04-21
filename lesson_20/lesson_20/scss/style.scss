@@ -525,9 +525,14 @@ body {
 .catalog {
 	&:not(:last-child) {
 		margin-bottom: 65px;
-		@media (max-width: 991.92px) {
+		@media (max-width: 991.98px) {
 			& {
 				margin-bottom: 40px;
+			}
+		}
+		@media (max-width: 768.98px) {
+			& {
+				margin-bottom: 25px;
 			}
 		}
 	}
@@ -672,7 +677,7 @@ body {
 	}
 	@media (max-width: 767.98px) {
 		& {
-			row-gap: 7px;
+			row-gap: 4px;
 		}
 	}
 	// .item-catalog__image
@@ -734,7 +739,7 @@ body {
 	&__current-price {
 		font-weight: 500;
 		font-size: 22px;
-		line-height: 1.5;
+		line-height: 1.2;
 		text-transform: uppercase;
 		color: #000000;
 	}
@@ -758,9 +763,14 @@ body {
 .divider {
 	&:not(:last-child) {
 		margin-bottom: 67px;
-		@media (max-width: 991.92px) {
+		@media (max-width: 991.98px) {
 			& {
 				margin-bottom: 30px;
+			}
+		}
+		@media (max-width: 767.98px) {
+			& {
+				margin-bottom: 25px;
 			}
 		}
 	}
@@ -780,22 +790,17 @@ body {
 		}
 		@media (max-width: 1270px) {
 			& {
-				padding: 50px 0 50px 50px;
+				padding: 50px 5px 50px 50px;
 			}
 		}
 		@media (max-width: 991.98px) {
 			& {
-				padding: 50px 0 50px 20px;
+				padding: 50px 5px 50px 20px;
 			}
 		}
 		@media (max-width: 909px) {
 			& {
-				padding: 20px 0 20px 20px;
-			}
-		}
-		@media (max-width: 630px) {
-			& {
-				padding: 8px;
+				padding: 20px 5px 20px 20px;
 			}
 		}
 		@media (max-width: 607px) {
@@ -984,7 +989,6 @@ body {
 			& {
 				display: flex;
 				flex-direction: column;
-				row-gap: 10px;
 			}
 		}
 	}
@@ -996,7 +1000,7 @@ body {
 			margin-bottom: 26px;
 			@media (max-width: 767.98px) {
 				& {
-					margin-bottom: 15px;
+					margin-bottom: 10px;
 				}
 			}
 		}
@@ -1005,7 +1009,7 @@ body {
 	&__title {
 		font-weight: 400;
 		font-size: 24px;
-		line-height: 1.6;
+		line-height: 1.5;
 	}
 	// .products__buttons
 	&__buttons {
@@ -1039,6 +1043,9 @@ body {
 	}
 	// .products__items
 	&__items {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 		gap: 15px 30px;
@@ -1318,7 +1325,7 @@ body {
 				gap: 10px 10px;
 			}
 		}
-		@media (max-width: 510px) {
+		@media (max-width: 600px) {
 			& {
 				grid-template-columns: repeat(1, 1fr);
 			}
@@ -1379,7 +1386,7 @@ body {
 		}
 		@media (max-width: 767.98px) {
 			&:not(:last-child) {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -1402,7 +1409,12 @@ body {
 		}
 		@media (max-width: 710px) {
 			& {
-				font-size: 22px;
+				font-size: 24px;
+			}
+			& {
+				&:not(:last-child) {
+					margin-bottom: 13px;
+				}
 			}
 		}
 		transition: color 300ms;
