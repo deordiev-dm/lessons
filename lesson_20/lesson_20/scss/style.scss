@@ -667,11 +667,6 @@ body {
 				gap: 15px 8px;
 			}
 		}
-		@media (max-width: 460px) {
-			& {
-				grid-template-columns: repeat(1, 1fr);
-			}
-		}
 	}
 	// .catalog__item
 	&__item {
@@ -813,12 +808,22 @@ body {
 		line-height: 1.5;
 		color: #000000;
 		transition: color 300ms;
+		@media (max-width: 550px) {
+			& {
+				font-size: 16px;
+			}
+		}
 	}
 	// .item-card__prices
 	&__prices {
 		display: flex;
 		column-gap: 15px;
 		align-items: center;
+		@media (max-width: 380px) {
+			& {
+				column-gap: 5px;
+			}
+		}
 	}
 	// .item-card__current-price
 	&__current-price {
@@ -838,6 +843,11 @@ body {
 				font-size: 20px;
 			}
 		}
+		@media (max-width: 475px) {
+			& {
+				font-size: 16px;
+			}
+		}
 	}
 	// .item-card__old-price
 	&__old-price {
@@ -848,6 +858,11 @@ body {
 		text-transform: uppercase;
 		color: #828282;
 		text-decoration: line-through;
+		@media (max-width: 350px) {
+			& {
+				font-size: 12px;
+			}
+		}
 	}
 	// .item-card_with-sale
 	// catalog__item item-card item-card_with-sale
@@ -1120,13 +1135,13 @@ body {
 		gap: 15px 30px;
 		@media (max-width: 767.98px) {
 			& {
-				gap: 20px 15px;
+				gap: 15px 15px;
 				grid-template-columns: repeat(2, 1fr);
 			}
 		}
-		@media (max-width: 480px) {
+		@media (max-width: 580px) {
 			& {
-				grid-template-columns: repeat(1, 1fr);
+				gap: 15px 8px;
 			}
 		}
 	}
