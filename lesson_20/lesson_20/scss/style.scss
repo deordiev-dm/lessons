@@ -680,7 +680,7 @@ body {
 			row-gap: 4px;
 		}
 	}
-	// .item-catalog__image
+	// .item-card__image
 	&__image {
 		position: relative;
 		padding-top: 130.813953%; /* 450/344 */
@@ -696,7 +696,7 @@ body {
 			transition: transform 800ms;
 		}
 	}
-	// .item-catalog__sale-label
+	// .item-card__sale-label
 	&__sale-label {
 		position: absolute;
 		top: 15px;
@@ -708,11 +708,11 @@ body {
 		color: #fff;
 		padding: 0 5px;
 	}
-	// .item-catalog__body
+	// .item-card__body
 	&__body {
 		flex-grow: 1;
 	}
-	// .item-catalog__category
+	// .item-card__category
 	&__category {
 		font-family: "Oswald";
 		font-weight: 600;
@@ -721,7 +721,7 @@ body {
 		text-transform: uppercase;
 		color: #bdbdbd;
 	}
-	// .item-catalog__title
+	// .item-card__title
 	&__title {
 		font-weight: 300;
 		font-size: 18px;
@@ -729,21 +729,27 @@ body {
 		color: #000000;
 		transition: color 300ms;
 	}
-	// .item-catalog__prices
+	// .item-card__prices
 	&__prices {
 		display: flex;
 		column-gap: 15px;
 		align-items: center;
 	}
-	// .item-catalog__current-price
+	// .item-card__current-price
 	&__current-price {
 		font-weight: 500;
 		font-size: 22px;
 		line-height: 1.2;
 		text-transform: uppercase;
 		color: #000000;
+		transition: color 300ms;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #eb5757;
+			}
+		}
 	}
-	// .item-catalog__old-price
+	// .item-card__old-price
 	&__old-price {
 		font-style: normal;
 		font-weight: 400;
@@ -753,9 +759,10 @@ body {
 		color: #828282;
 		text-decoration: line-through;
 	}
-	// .item-catalog_with-sale
+	// .item-card_with-sale
+	// catalog__item item-card item-card_with-sale
 	&_with-sale {
-		.item-catalog__current-price {
+		.item-card__current-price {
 			color: #eb5757;
 		}
 	}
@@ -948,6 +955,7 @@ body {
 		height: 100%;
 		width: 100%;
 		padding-top: 24.475891%;
+		overflow: hidden;
 		img {
 			position: absolute;
 			top: 0;
@@ -956,6 +964,13 @@ body {
 			width: 100%;
 			object-fit: cover;
 			object-position: right;
+			transition: transform 800ms;
+			transform-origin: left;
+			@media (any-hover: hover) {
+				.divider__wrapper:hover & {
+					transform: scale(1.02);
+				}
+			}
 		}
 	}
 }
@@ -1114,6 +1129,7 @@ body {
 	&__image {
 		position: relative;
 		padding-top: 34.245283%; /* 363/1060 */
+		overflow: hidden;
 		@media (max-width: 750px) {
 			& {
 				padding-top: 78.26087%; /* 252/322 */
@@ -1135,6 +1151,13 @@ body {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+			transition: transform 800ms;
+			transform-origin: right;
+			@media (any-hover: hover) {
+				.explore:hover & {
+					transform: scale(1.02);
+				}
+			}
 			@media (max-width: 750px) {
 				& {
 					padding: 0 15px;

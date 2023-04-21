@@ -783,6 +783,14 @@ body {
   line-height: 1.2;
   text-transform: uppercase;
   color: #000000;
+  -webkit-transition: color 300ms;
+  -o-transition: color 300ms;
+  transition: color 300ms;
+}
+@media (any-hover: hover) {
+  .item-card__current-price:hover {
+    color: #eb5757;
+  }
 }
 .item-card__old-price {
   font-style: normal;
@@ -793,7 +801,7 @@ body {
   color: #828282;
   text-decoration: line-through;
 }
-.item-card_with-sale .item-catalog__current-price {
+.item-card_with-sale .item-card__current-price {
   color: #eb5757;
 }
 
@@ -966,6 +974,7 @@ body {
   height: 100%;
   width: 100%;
   padding-top: 24.475891%;
+  overflow: hidden;
 }
 .divider__background img {
   position: absolute;
@@ -977,6 +986,21 @@ body {
      object-fit: cover;
   -o-object-position: right;
      object-position: right;
+  -webkit-transition: -webkit-transform 800ms;
+  transition: -webkit-transform 800ms;
+  -o-transition: transform 800ms;
+  transition: transform 800ms;
+  transition: transform 800ms, -webkit-transform 800ms;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+@media (any-hover: hover) {
+  .divider__wrapper:hover .divider__background img {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+  }
 }
 
 .products:not(:last-child) {
@@ -1130,6 +1154,7 @@ body {
 .explore__image {
   position: relative;
   padding-top: 34.245283%; /* 363/1060 */
+  overflow: hidden;
 }
 @media (max-width: 750px) {
   .explore__image {
@@ -1153,6 +1178,21 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 800ms;
+  transition: -webkit-transform 800ms;
+  -o-transition: transform 800ms;
+  transition: transform 800ms;
+  transition: transform 800ms, -webkit-transform 800ms;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+}
+@media (any-hover: hover) {
+  .explore:hover .explore__image img {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+  }
 }
 @media (max-width: 750px) {
   .explore__image img {
