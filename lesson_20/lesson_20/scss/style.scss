@@ -748,6 +748,11 @@ body {
 				color: #eb5757;
 			}
 		}
+		@media (max-width: 600px) {
+			& {
+				font-size: 20px;
+			}
+		}
 	}
 	// .item-card__old-price
 	&__old-price {
@@ -1059,14 +1064,14 @@ body {
 	// .products__items
 	&__items {
 		&:not(:last-child) {
-			margin-bottom: 10px;
+			margin-bottom: 15px;
 		}
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 		gap: 15px 30px;
 		@media (max-width: 767.98px) {
 			& {
-				gap: 10px 15px;
+				gap: 20px 15px;
 				grid-template-columns: repeat(2, 1fr);
 			}
 		}
@@ -1475,5 +1480,3 @@ body {
 		}
 	}
 }
-
-// start changing mf
