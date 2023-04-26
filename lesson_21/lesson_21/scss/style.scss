@@ -745,6 +745,16 @@ body {
 	&__featured {
 		&:not(:last-child) {
 			margin-bottom: rem(100);
+			@media (max-width: em(991.98)) {
+				& {
+					margin-bottom: rem(50);
+				}
+			}
+			@media (max-width: em(767.98)) {
+				& {
+					margin-bottom: rem(25);
+				}
+			}
 		}
 	}
 }
@@ -839,7 +849,6 @@ body {
 		}
 	}
 }
-
 .item-featured {
 	&__link {
 		display: grid;
@@ -990,3 +999,118 @@ body {
 	}
 }
 /* featured */
+/* travel */
+.page {
+	padding-bottom: rem(100);
+	@media (max-width: em(991.98)) {
+		& {
+			padding-bottom: rem(50);
+		}
+	}
+	@media (max-width: em(767.98)) {
+		& {
+			padding-bottom: rem(25);
+		}
+	}
+	// .page__travel
+	&__travel {
+		&:not(:last-child) {
+			margin-bottom: rem(100);
+			@media (max-width: em(991.98)) {
+				& {
+					margin-bottom: rem(50);
+				}
+			}
+			@media (max-width: em(767.98)) {
+				& {
+					margin-bottom: rem(25);
+				}
+			}
+		}
+	}
+}
+.travel {
+	// .travel__container
+	&__container {
+	}
+	// .travel__title
+	&__title {
+		font-weight: 500;
+		font-size: rem(25);
+		line-height: 1.6; /* 40/25 */
+		color: #495057;
+		font-size: rem(25);
+		&:not(:last-child) {
+			margin-bottom: em(60, 25);
+			@media (max-width: em(810)) {
+				& {
+					margin-bottom: em(25, 25);
+				}
+			}
+			@media (max-width: em(475)) {
+				& {
+					font-size: rem(22);
+				}
+			}
+		}
+	}
+	// .travel__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(10) rem(30);
+		@media (max-width: em(1150)) {
+			& {
+				gap: rem(15) rem(10);
+			}
+		}
+		@media (max-width: em(820)) {
+			& {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		@media (max-width: em(475)) {
+			& {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+	}
+	// .travel__item
+	&__item {
+	}
+
+	.item-articles {
+		// .item-articles__image
+		&__image {
+		}
+		// .item-articles__link-category
+		&__link-category {
+			top: rem(25);
+			right: rem(25);
+			@media (max-width: em(991.98)) {
+				& {
+					top: rem(15);
+					right: rem(15);
+				}
+			}
+		}
+		// .item-articles__body
+		&__body {
+		}
+		.body-content {
+			// .body-content__date
+			&__date {
+			}
+			// .body-content__title
+			&__title {
+				a {
+					font-size: rem(16);
+					font-weight: 500;
+				}
+			}
+			// .body-content__text
+			&__text {
+			}
+		}
+	}
+}
