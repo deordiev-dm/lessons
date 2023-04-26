@@ -889,6 +889,11 @@ body {
   max-width: 32.9375rem;
   margin: 0 auto;
 }
+@media (max-width: 64.375em) {
+  .featured__main {
+    padding: 1.875rem 0.9375rem;
+  }
+}
 .featured__title {
   font-weight: 500;
   font-size: 1.5625rem;
@@ -918,6 +923,40 @@ body {
           flex-direction: column;
   row-gap: 2.5rem;
 }
+@media (max-width: 47.99875em) {
+  .featured {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .featured__main {
+    max-width: none;
+  }
+  .featured__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+  }
+  .featured .item-featured__link {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .item-featured__link {
   display: grid;
   grid-template-columns: 36.345382% 1fr;
@@ -931,6 +970,11 @@ body {
   }
   .item-featured__link:hover .item-featured__title {
     color: #ccd5ae;
+  }
+}
+@media (max-width: 60.625em) {
+  .item-featured__link {
+    gap: 0.625rem 0.9375rem;
   }
 }
 .item-featured__image {
@@ -963,6 +1007,11 @@ body {
           flex-direction: column;
   gap: 0.9375rem;
 }
+@media (max-width: 55em) {
+  .item-featured__body {
+    gap: 0.3125rem;
+  }
+}
 .item-featured__date {
   color: #e5e5e5;
 }
@@ -980,6 +1029,7 @@ body {
 }
 
 .image-featured {
+  padding: 0 0.9375rem;
   position: relative;
   border-radius: 0.1875rem;
   overflow: hidden;
@@ -992,6 +1042,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (max-width: 47.99875em) {
+  .image-featured {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
 }
 .image-featured__body {
   max-width: 24.5625rem;
