@@ -1114,3 +1114,122 @@ body {
 		}
 	}
 }
+/* travel */
+/* footer */
+.footer {
+	background-color: #212529;
+	// .footer__container
+	&__container {
+		padding: rem(40);
+	}
+	// .footer__top
+	&__top {
+		display: flex;
+		column-gap: rem(15);
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+		}
+	}
+	// .footer__logo
+	&__logo {
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 1.39;
+		color: #f8f9fa;
+		&::after {
+			content: ".";
+			color: #ddbea9;
+		}
+	}
+	// .footer__useful-links
+	&__useful-links {
+	}
+	// .footer__bottom
+	&__bottom {
+		padding-top: rem(40);
+		border-top: 1px solid rgba(229, 229, 229, 0.2);
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(10);
+		justify-content: space-between;
+		gap: rem(15);
+	}
+	// .footer__address
+	&__address {
+		font-style: normal;
+		font-weight: 500;
+		line-height: 2.08;
+		color: rgba(248, 249, 250, 0.5);
+	}
+	// .footer__copyrights
+	&__copyrights {
+		font-weight: 500;
+		line-height: 2.08;
+		color: rgba(248, 249, 250, 0.5);
+	}
+	@media (max-width: em(991.98)) {
+		.footer__container {
+			padding: rem(25);
+		}
+		.footer__top:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		.footer__bottom {
+			padding-top: rem(20);
+		}
+	}
+	@media (max-width: em(650)) {
+		& {
+			.useful-links-footer__list {
+				column-gap: rem(10);
+			}
+		}
+	}
+	@media (max-width: em(530)) {
+		& {
+			.footer__top {
+				flex-direction: column;
+				row-gap: rem(10);
+			}
+		}
+	}
+	@media (max-width: em(410)) {
+		& {
+			.footer__container {
+				padding: rem(10);
+			}
+		}
+		.footer__top:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+		.footer__bottom {
+			padding-top: rem(0);
+			border-top: 0 solid #000;
+		}
+	}
+}
+.useful-links-footer {
+	// .useful-links-footer__list
+	&__list {
+		display: flex;
+		column-gap: rem(25);
+		flex-wrap: wrap;
+	}
+	// .useful-links-footer__item
+	&__item {
+	}
+	// .useful-links-footer__link
+	&__link {
+		font-weight: 500;
+		line-height: 2.08;
+		color: rgba(248, 249, 250, 0.5);
+		transition: color 300ms;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ccd5ae;
+			}
+		}
+	}
+}
+/* footer */
