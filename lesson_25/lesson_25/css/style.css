@@ -6,7 +6,7 @@
   margin: 0;
   border: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -63,6 +63,7 @@ body {
   -o-transition: opacity 800ms;
   transition: opacity 800ms;
 }
+
 body.loaded {
   opacity: 1;
 }
@@ -70,6 +71,7 @@ body.loaded {
 main {
   position: relative;
 }
+
 main .background-image {
   position: absolute;
   top: 0;
@@ -77,7 +79,7 @@ main .background-image {
   max-width: 100%;
   min-height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 h1 {
@@ -93,13 +95,14 @@ h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
+
 .wrapper > main {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 [class*=__container] {
@@ -108,9 +111,11 @@ h1 {
   padding: 3.125rem 0.9375rem;
   margin: 0 auto;
 }
+
 [class*=__container] > *:not(:last-child) {
   margin-bottom: 1.25rem;
 }
+
 [class*=__container] > .item {
   color: yellowgreen;
   font-size: 1.5rem;
@@ -120,9 +125,11 @@ h1 {
 .task1 > *:not(:last-child) {
   margin-bottom: 0.625rem;
 }
+
 .task1 .item {
   display: inline-block;
 }
+
 .task1 .item.active {
   color: red;
 }
@@ -140,6 +147,7 @@ footer {
   position: relative;
   z-index: 2;
 }
+
 footer.new-bg {
   background-color: rgb(56, 16, 72);
 }
@@ -149,12 +157,14 @@ footer.new-bg {
   font-size: 3rem;
   display: inline-block;
 }
+
 .typing-text::after {
   content: "|";
   font-size: 2.25rem;
   -webkit-animation: blink 550ms linear infinite alternate;
-          animation: blink 550ms linear infinite alternate;
+  animation: blink 550ms linear infinite alternate;
 }
+
 @-webkit-keyframes blink {
   0% {
     opacity: 0;
@@ -171,7 +181,6 @@ footer.new-bg {
     opacity: 1;
   }
 }
-
 .cloud {
   position: absolute;
   z-index: 1;
@@ -179,64 +188,65 @@ footer.new-bg {
   top: 0;
   left: 15%;
   -webkit-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
   -webkit-transform-origin: top;
-      -ms-transform-origin: top;
-          transform-origin: top;
-  -webkit-animation: rotateCloud 2000ms ease-in-out infinite alternate;
-          animation: rotateCloud 2000ms ease-in-out infinite alternate;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation: rotateCloud 3000ms ease-in-out infinite alternate;
+          animation: rotateCloud 3000ms ease-in-out infinite alternate;
 }
+
 @-webkit-keyframes rotateCloud {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
   }
 }
 @keyframes rotateCloud {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    transform: rotate(5deg);
   }
 }
-
 .moon {
   position: absolute;
   z-index: 0;
-  top: 33%;
-  right: 20%;
+  top: 36%;
+  right: 15%;
   width: 30%;
   -webkit-transform: scale(-1, 1);
-      -ms-transform: scale(-1, 1);
-          transform: scale(-1, 1);
-  -webkit-animation: moonRotate 2500ms ease-in-out infinite alternate;
-          animation: moonRotate 2500ms ease-in-out infinite alternate;
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  -webkit-animation: moonRotate 3000ms ease-in-out infinite alternate;
+          animation: moonRotate 3000ms ease-in-out infinite alternate;
 }
+
 @-webkit-keyframes moonRotate {
   0% {
     -webkit-transform: scale(-1, 1) rotate(-5deg);
-            transform: scale(-1, 1) rotate(-5deg);
+    transform: scale(-1, 1) rotate(-5deg);
   }
   100% {
     -webkit-transform: scale(-1, 1) rotate(5deg);
-            transform: scale(-1, 1) rotate(5deg);
+    transform: scale(-1, 1) rotate(5deg);
   }
 }
 @keyframes moonRotate {
   0% {
     -webkit-transform: scale(-1, 1) rotate(-5deg);
-            transform: scale(-1, 1) rotate(-5deg);
+    transform: scale(-1, 1) rotate(-5deg);
   }
   100% {
     -webkit-transform: scale(-1, 1) rotate(5deg);
-            transform: scale(-1, 1) rotate(5deg);
+    transform: scale(-1, 1) rotate(5deg);
   }
 }

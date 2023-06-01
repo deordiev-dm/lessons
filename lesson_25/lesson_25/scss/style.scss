@@ -1,8 +1,56 @@
-@use "sass:math";
-@import "_reset";
-@import "_common";
-@import "_functions";
 @import url("https://fonts.googleapis.com/css?family=Inter:regular,500,700&display=swap");
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+}
+
+textarea,
+button,
+input {
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+	background-color: inherit;
+}
 
 html {
 	color-scheme: dark;
@@ -11,95 +59,116 @@ html {
 body {
 	opacity: 0;
 	font-family: "Inter", sans-serif;
+	-webkit-transition: opacity 800ms;
+	-o-transition: opacity 800ms;
 	transition: opacity 800ms;
-	&.loaded {
-		opacity: 1;
-	}
 }
+body.loaded {
+	opacity: 1;
+}
+
 main {
 	position: relative;
-	.background-image {
-		position: absolute;
-		top: 0;
-		left: 0;
-		max-width: 100%;
-		min-height: 100%;
-		object-fit: cover;
-	}
+}
+main .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	min-height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 h1 {
-	font-size: rem(32);
+	font-size: 2rem;
 	font-weight: 700;
 }
+
 .wrapper {
 	overflow: clip;
 	min-height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
-	& > main {
-		flex-grow: 1;
-	}
+}
+.wrapper > main {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
 }
 
 [class*="__container"] {
 	position: relative;
 	z-index: 2;
-	padding: rem(50) rem(15);
+	padding: 3.125rem 0.9375rem;
 	margin: 0 auto;
-	& > *:not(:last-child) {
-		margin-bottom: rem(20);
-	}
-	& > .item {
-		color: yellowgreen;
-		font-size: rem(24);
-		font-weight: 500;
-	}
+}
+[class*="__container"] > *:not(:last-child) {
+	margin-bottom: 1.25rem;
+}
+[class*="__container"] > .item {
+	color: yellowgreen;
+	font-size: 1.5rem;
+	font-weight: 500;
 }
 
-.task1 {
-	& > *:not(:last-child) {
-		margin-bottom: rem(10);
-	}
-	.item {
-		display: inline-block;
-		&.active {
-			color: red;
-		}
-	}
+.task1 > *:not(:last-child) {
+	margin-bottom: 0.625rem;
+}
+.task1 .item {
+	display: inline-block;
+}
+.task1 .item.active {
+	color: red;
 }
 
 header,
 footer {
-	padding: rem(10);
-	height: rem(50);
+	padding: 0.625rem;
+	height: 3.125rem;
 }
 
 footer {
+	-webkit-transition: background-color 300ms;
+	-o-transition: background-color 300ms;
 	transition: background-color 300ms;
 	position: relative;
 	z-index: 2;
-	&.new-bg {
-		background-color: rgb(56, 16, 72);
-	}
+}
+footer.new-bg {
+	background-color: rgb(56, 16, 72);
 }
 
 .typing-text {
 	font-weight: 700;
-	font-size: rem(48);
+	font-size: 3rem;
 	display: inline-block;
-	&::after {
-		content: "|";
-		font-size: rem(36);
-		animation: blink 550ms linear infinite alternate;
-		@keyframes blink {
-			0% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
+}
+.typing-text::after {
+	content: "|";
+	font-size: 2.25rem;
+	-webkit-animation: blink 550ms linear infinite alternate;
+	animation: blink 550ms linear infinite alternate;
+}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -109,33 +178,63 @@ footer {
 	width: 65%;
 	top: 0;
 	left: 15%;
+	-webkit-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
 	transform: rotate(-5deg);
+	-webkit-transform-origin: top;
+	-ms-transform-origin: top;
 	transform-origin: top;
-	animation: rotateCloud 2000ms ease-in-out infinite alternate;
-	@keyframes rotateCloud {
-		0% {
-			transform: rotate(0deg);
-		}
-		100% {
-			transform: rotate(5deg);
-		}
+	animation: rotateCloud 3000ms ease-in-out infinite alternate;
+}
+@-webkit-keyframes rotateCloud {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+}
+@keyframes rotateCloud {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
 	}
 }
 
 .moon {
 	position: absolute;
 	z-index: 0;
-	top: 33%;
-	right: 20%;
+	top: 36%;
+	right: 15%;
 	width: 30%;
+	-webkit-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
 	transform: scale(-1, 1);
-	animation: moonRotate 2500ms ease-in-out infinite alternate;
-	@keyframes moonRotate {
-		0% {
-			transform: scale(-1, 1) rotate(-5deg);
-		}
-		100% {
-			transform: scale(-1, 1) rotate(5deg);
-		}
+	animation: moonRotate 3000ms ease-in-out infinite alternate;
+}
+@-webkit-keyframes moonRotate {
+	0% {
+		-webkit-transform: scale(-1, 1) rotate(-5deg);
+		transform: scale(-1, 1) rotate(-5deg);
+	}
+	100% {
+		-webkit-transform: scale(-1, 1) rotate(5deg);
+		transform: scale(-1, 1) rotate(5deg);
+	}
+}
+@keyframes moonRotate {
+	0% {
+		-webkit-transform: scale(-1, 1) rotate(-5deg);
+		transform: scale(-1, 1) rotate(-5deg);
+	}
+	100% {
+		-webkit-transform: scale(-1, 1) rotate(5deg);
+		transform: scale(-1, 1) rotate(5deg);
 	}
 }
