@@ -86,7 +86,56 @@ footer {
 
 .typing-text {
 	font-weight: 700;
-	min-height: rem(80);
 	font-size: rem(48);
 	display: inline-block;
+	&::after {
+		content: "|";
+		font-size: rem(36);
+		animation: blink 550ms linear infinite alternate;
+		@keyframes blink {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.cloud {
+	position: absolute;
+	z-index: 1;
+	width: 65%;
+	top: 0;
+	left: 15%;
+	transform: rotate(-5deg);
+	transform-origin: top;
+	animation: rotateCloud 2000ms ease-in-out infinite alternate;
+	@keyframes rotateCloud {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(5deg);
+		}
+	}
+}
+
+.moon {
+	position: absolute;
+	z-index: 0;
+	top: 33%;
+	right: 20%;
+	width: 30%;
+	transform: scale(-1, 1);
+	animation: moonRotate 2500ms ease-in-out infinite alternate;
+	@keyframes moonRotate {
+		0% {
+			transform: scale(-1, 1) rotate(-5deg);
+		}
+		100% {
+			transform: scale(-1, 1) rotate(5deg);
+		}
+	}
 }

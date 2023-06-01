@@ -45,39 +45,38 @@
 // Затримка між зміною числа, та до якого числа має працювати інтервал має задаватись в дата атрибутах елемента item.
 // Функція має запустатить коли ми доскролюємо до елементу item (його видно), і не запускатись повторно.
 
-const target = document.querySelector("[data-interval]");
-const targetText = target.textContent;
+// const target = document.querySelector("[data-interval]");
+// const targetText = target.textContent;
 
-let i = 1;
-target.textContent = `${targetText} ${i}`;
-const endTimer = target.dataset.finishPoint;
-const intervalTimer = target.dataset.interval;
-// data-interval="1000" data-finish-point="10"
+// let i = 1;
+// target.textContent = `${targetText} ${i}`;
+// const endTimer = target.dataset.finishPoint;
+// const intervalTimer = target.dataset.interval;
 
 // Intersection Observer API
 
-let options = {
-	root: null,
-	rootMargin: "0px",
-	threshold: 0.3,
-};
+// let options = {
+// 	root: null,
+// 	rootMargin: "0px",
+// 	threshold: 0.3,
+// };
 
-let callback = (entries, observer) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			const timer = setInterval(() => {
-				++i <= endTimer
-					? (target.textContent = `${targetText} ${i}`)
-					: clearInterval(timer);
-			}, intervalTimer);
-		}
-	});
-};
+// let callback = (entries, observer) => {
+// 	entries.forEach((entry) => {
+// 		if (entry.isIntersecting) {
+// 			const timer = setInterval(() => {
+// 				++i <= endTimer
+// 					? (target.textContent = `${targetText} ${i}`)
+// 					: clearInterval(timer);
+// 			}, intervalTimer);
+// 		}
+// 	});
+// };
 
-let observer = new IntersectionObserver(callback, options);
-observer.observe(target);
+// let observer = new IntersectionObserver(callback, options);
+// observer.observe(target);
 
-// ефект паралаксу
+// !!!ефект паралаксу
 const backgroundImage = document.querySelector("img");
 window.addEventListener("scroll", parallaxEffect);
 
@@ -88,7 +87,12 @@ function parallaxEffect(e) {
 // ефект друкованого тексту
 
 const typedTextElement = document.querySelector(".typing-text");
-const typedText = typedTextElement.textContent.trim();
+// const typedText = typedTextElement.textContent.trim();
+
+let userText = prompt("Введи своє ім'я");
+userText = userText.trim();
+const typedText = userText + ", ти миле сонечко!";
+console.log(typedText);
 const typedTextLength = typedText.length;
 
 typedTextElement.textContent = ``;
@@ -104,6 +108,6 @@ function pageLoaded(e) {
 			index < typedTextLength
 				? (typedTextElement.textContent += `${typedText[index++]}`)
 				: clearInterval(typingInterval);
-		}, 150);
+		}, 120);
 	}, 800);
 }
