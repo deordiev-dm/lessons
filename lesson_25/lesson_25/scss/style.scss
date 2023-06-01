@@ -11,7 +11,7 @@ html {
 body {
 	opacity: 0;
 	font-family: "Inter", sans-serif;
-	transition: opacity 2000ms;
+	transition: opacity 800ms;
 	&.loaded {
 		opacity: 1;
 	}
@@ -82,4 +82,11 @@ footer {
 	&.new-bg {
 		background-color: rgb(56, 16, 72);
 	}
+}
+
+.typing-text {
+	font-weight: 700;
+	min-height: rem(80);
+	font-size: rem(48);
+	display: inline-block;
 }

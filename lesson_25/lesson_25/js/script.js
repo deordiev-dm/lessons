@@ -3,40 +3,40 @@
 // При кліку на кожен з елментів додати клас active,
 // при повторному кліку прибрати клас
 
-document.addEventListener("click", clickActions);
+// document.addEventListener("click", clickActions);
 
-function clickActions(e) {
-	e.target.classList.contains("item")
-		? e.target.classList.toggle("active")
-		: null;
-}
+// function clickActions(e) {
+// 	e.target.classList.contains("item")
+// 		? e.target.classList.toggle("active")
+// 		: null;
+// }
 
 // ! Задача №2
 // Дано в css/scss: body прозорий
 // При повному завантаженню сторінки додати клас до body який прибирає прозорість.
 
-window.addEventListener("load", pageLoaded);
-const bodyElement = document.body;
+// window.addEventListener("load", pageLoaded);
+// const bodyElement = document.body;
 
-function pageLoaded(e) {
-	bodyElement.classList.add("loaded");
-}
+// function pageLoaded(e) {
+// 	bodyElement.classList.add("loaded");
+// }
 
 // ! Задача №3
 // Дано в html: header main footer
 // Пи наведенні курсору на header змінювати колір фону у footer.
 // Коли курсор йде з header повертати початковий фон для footer.
 
-const headerElement = document.querySelector("header");
-const footerElement = document.querySelector("footer");
+// const headerElement = document.querySelector("header");
+// const footerElement = document.querySelector("footer");
 
-headerElement.addEventListener("mouseenter", headerActions);
-headerElement.addEventListener("mouseleave", headerActions);
+// headerElement.addEventListener("mouseenter", headerActions);
+// headerElement.addEventListener("mouseleave", headerActions);
 
-function headerActions(e) {
-	if (e.type === "mouseenter") footerElement.classList.add("new-bg");
-	else if (e.type === "mouseleave") footerElement.classList.remove("new-bg");
-}
+// function headerActions(e) {
+// 	if (e.type === "mouseenter") footerElement.classList.add("new-bg");
+// 	else if (e.type === "mouseleave") footerElement.classList.remove("new-bg");
+// }
 
 // ! Задача №4
 // Дано в html: текст, елемент з класом item, текст. Так, що елемент з класом item за межами в'юпотрта.
@@ -83,4 +83,27 @@ window.addEventListener("scroll", parallaxEffect);
 
 function parallaxEffect(e) {
 	backgroundImage.style.cssText = `transform: translateY(${0.7 * scrollY}px);`;
+}
+
+// ефект друкованого тексту
+
+const typedTextElement = document.querySelector(".typing-text");
+const typedText = typedTextElement.textContent.trim();
+const typedTextLength = typedText.length;
+
+typedTextElement.textContent = ``;
+
+window.addEventListener("load", pageLoaded);
+const bodyElement = document.body;
+
+function pageLoaded(e) {
+	bodyElement.classList.add("loaded");
+	let index = 0;
+	let typingTimeout = setTimeout(() => {
+		let typingInterval = setInterval(() => {
+			index < typedTextLength
+				? (typedTextElement.textContent += `${typedText[index++]}`)
+				: clearInterval(typingInterval);
+		}, 150);
+	}, 800);
 }

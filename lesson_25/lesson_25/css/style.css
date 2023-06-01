@@ -59,9 +59,9 @@ html {
 body {
   opacity: 0;
   font-family: "Inter", sans-serif;
-  -webkit-transition: opacity 2000ms;
-  -o-transition: opacity 2000ms;
-  transition: opacity 2000ms;
+  -webkit-transition: opacity 800ms;
+  -o-transition: opacity 800ms;
+  transition: opacity 800ms;
 }
 body.loaded {
   opacity: 1;
@@ -142,4 +142,11 @@ footer {
 }
 footer.new-bg {
   background-color: rgb(56, 16, 72);
+}
+
+.typing-text {
+  font-weight: 700;
+  min-height: 5rem;
+  font-size: 3rem;
+  display: inline-block;
 }
