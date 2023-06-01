@@ -1,3 +1,4 @@
+alert("привіт");
 // ! Задача №1
 // Дано в html: три елементи з класом item.
 // При кліку на кожен з елментів додати клас active,
@@ -87,11 +88,11 @@ function parallaxEffect(e) {
 // ефект друкованого тексту
 
 const typedTextElement = document.querySelector(".typing-text");
-// const typedText = typedTextElement.textContent.trim();
+const typedText = typedTextElement.textContent.trim();
 
-let userText = prompt("Введи своє ім'я");
-userText = userText.trim();
-const typedText = userText + ", ти миле сонечко!";
+// let userText = prompt("Введи своє ім'я");
+// userText = userText.trim();
+// const typedText = userText + ", ти миле сонечко!";
 console.log(typedText);
 const typedTextLength = typedText.length;
 
