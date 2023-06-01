@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+textarea,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  opacity: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-transition: opacity 2000ms;
+  -o-transition: opacity 2000ms;
+  transition: opacity 2000ms;
+}
+body.loaded {
+  opacity: 1;
+}
+
+main {
+  position: relative;
+}
+main .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+[class*=__container] {
+  position: relative;
+  z-index: 2;
+  padding: 3.125rem 0.9375rem;
+  margin: 0 auto;
+}
+[class*=__container] > *:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+[class*=__container] > .item {
+  color: yellowgreen;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.task1 > *:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+.task1 .item {
+  display: inline-block;
+}
+.task1 .item.active {
+  color: red;
+}
+
+header,
+footer {
+  padding: 0.625rem;
+  height: 3.125rem;
+}
+
+footer {
+  -webkit-transition: background-color 300ms;
+  -o-transition: background-color 300ms;
+  transition: background-color 300ms;
+  position: relative;
+  z-index: 2;
+}
+footer.new-bg {
+  background-color: rgb(56, 16, 72);
+}

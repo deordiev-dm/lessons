@@ -1,0 +1,85 @@
+@use "sass:math";
+@import "_reset";
+@import "_common";
+@import "_functions";
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,700&display=swap");
+
+html {
+	color-scheme: dark;
+}
+
+body {
+	opacity: 0;
+	font-family: "Inter", sans-serif;
+	transition: opacity 2000ms;
+	&.loaded {
+		opacity: 1;
+	}
+}
+main {
+	position: relative;
+	.background-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		max-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+	}
+}
+
+h1 {
+	font-size: rem(32);
+	font-weight: 700;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	& > main {
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"] {
+	position: relative;
+	z-index: 2;
+	padding: rem(50) rem(15);
+	margin: 0 auto;
+	& > *:not(:last-child) {
+		margin-bottom: rem(20);
+	}
+	& > .item {
+		color: yellowgreen;
+		font-size: rem(24);
+		font-weight: 500;
+	}
+}
+
+.task1 {
+	& > *:not(:last-child) {
+		margin-bottom: rem(10);
+	}
+	.item {
+		display: inline-block;
+		&.active {
+			color: red;
+		}
+	}
+}
+
+header,
+footer {
+	padding: rem(10);
+	height: rem(50);
+}
+
+footer {
+	transition: background-color 300ms;
+	position: relative;
+	z-index: 2;
+	&.new-bg {
+		background-color: rgb(56, 16, 72);
+	}
+}

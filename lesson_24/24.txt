@@ -1,0 +1,80 @@
+Задача №1
+Отримати в константу елемент <body>
+
+Відповідь: const bodyElement = document.body;
+
+// =========================================
+
+Задача №2
+Написати функцію, яка додає в <body> список UL
+з певною кількістю LI (кількість має передаватись як параметр функції, також мати значення за замовченням)
+
+Відповідь: 
+let addList = (numberOfLi = 3) => {
+	const list = document.createElement("ul");
+	for (let i = 0; i < numberOfLi; i++) {
+		list.insertAdjacentHTML(
+			"beforeend", `
+		<li>Пункт списку №${i+1}</li>
+		`);
+	}
+	document.body.insertAdjacentElement("afterbegin", list);
+};
+
+// =========================================
+
+Задача №3
+Додати до елементу <body> класс loaded.
+Потім перевірити чи є клас loaded у елемента <body>
+і, якщо є, додати стиль кольору тексту зедлений.
+
+Відповідь: 
+const bodyElement = document.body;
+bodyElement.classList.add(`loaded`);
+
+if (bodyElement.classList.contains(`loaded`)) bodyElement.style.color = `green`;
+
+// =========================================
+
+Задача №4
+Дано в html: три елементи з класом item.
+Треба отримати ці елементи в константу, кожному додати клас active, 
+та перезаписати контент всередені кожного елемента на "Елемент №(тут порядковий номер елементу починаючи з 1)".
+
+Відповідь: 
+const itemElements = document.querySelectorAll(`.item`);
+for (let i = 1; i <=	 itemElements.length; i++) {
+	itemElements[i - 1].classList.add(`active`);
+	itemElements[i - 1].textContent = `Елемент №${i}`;
+}	
+
+// =========================================
+
+Задача №5
+Дано в html: текст, далі кнопка з класом button.
+Треба прокрутити скрол сторінки до кнопки
+
+Відповідь: 
+const button = document.querySelector(`.button`);
+let scrollToElement = (element) => {
+	element.scrollIntoView({
+		block: "center",
+		inline: "nearest",
+		behavior: "smooth",
+	});
+};
+
+scrollToElement(button);
+
+// =========================================
+
+Задача №6
+Дано в html: посилання з класом link
+Треба додати до посилання дата атрибут зі значенням 100
+Поім отримати значення трибуту, та, якщо значення меньше 200
+пофарбувати колір тексту посилання в червоний
+
+Відповідь: 
+const link = document.querySelector(`.link`);
+let number = +link.dataset.number;
+if (number < 200) link.style.color = `red`;
